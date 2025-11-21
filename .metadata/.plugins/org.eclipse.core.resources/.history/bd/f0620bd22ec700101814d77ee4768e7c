@@ -1,0 +1,13 @@
+#ifndef __NUNCHUCK_H
+#define __NUNCHUCK_H
+
+#include "stm32l476xx.h"
+
+extern uint32_t nunchuck_address;
+
+void nunchuck_init(void);
+void nunchuck_drive(int *vals,  uint8_t *data_received, uint8_t nunchuck_unlock_codes[2], uint8_t data_converted[1], int chuck_delay);
+
+void nunchuck_uart_test(uint8_t data_received[6], uint8_t nunchuck_unlock_codes[2], uint8_t data_converted[1], int chuck_delay);
+
+#endif // __NUNCHUCK_H

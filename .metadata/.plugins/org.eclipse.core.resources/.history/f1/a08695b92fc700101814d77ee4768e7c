@@ -1,0 +1,23 @@
+/* nunchuck.h */
+#ifndef __NUNCHUCK_H
+#define __NUNCHUCK_H
+
+#include "stm32l476xx.h"
+#include "main.h" // Brings in HAL definitions
+
+// Struct to hold Nunchuck data
+typedef struct {
+    uint8_t joy_x;
+    uint8_t joy_y;
+    uint16_t accel_x;
+    uint16_t accel_y;
+    uint16_t accel_z;
+    uint8_t z_btn;
+    uint8_t c_btn;
+} nunchuck_t;
+
+// Function Prototypes
+void nunchuck_init(void);
+nunchuck_t nunchuck_read(void);
+
+#endif // __NUNCHUCK_H

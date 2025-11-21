@@ -1,0 +1,127 @@
+#include "nunchuck.h"
+#include "GPIO.h"
+#include "clock.h"
+#include "UART.h"
+#include "i2c.h"
+#include <cstdint>
+
+/* Setting Up our Pin Configuration */
+#define SCL 8 //SCL line from nunchuck (clock) PB8
+#define SDA 9 //SDA line from nunchuck (data) PB9
+
+uint32_t nunchuck_address = 0xA4U;
+
+void nunchuck_init(){
+    //init nunchuck pins
+	clockEnable(GPIOB); //Make sure GPIO Clock B is enabled
+
+    // Set the SCL and SDA lines to alternate function mode
+	pinMode(GPIOB, SCL, ALT_FUNC);
+	pinMode(GPIOB, SDA, ALT_FUNC);
+
+    // Enable I2C mode in the Alternate Function Register
+    GPIOB->AFR[1] |= 0x00000044U;
+    
+    // Set the Output Speeds of the SCL and SDA lines to HIGH_SPEED
+    setOutputSpeed(GPIOB, SCL, HIGH_SPEED);
+    setOutputSpeed(GPIOB, SDA, HIGH_SPEED);
+
+    // Set the Output Types of the SCL and SDA lines to Open Drain
+    setOutputType(GPIOB, SCL, OPENDRAIN);
+    setOutputType(GPIOB, SDA, OPENDRAIN);
+
+    // Configure the Outputs of the SCL and SDA lines to be pulled up
+    setPullUpDown(GPIOB, SCL, PULLUP);
+    setPullUpDown(GPIOB, SDA, PULLUP);
+}
+
+void nunchuck_drive(int *vals, uint8_t data_received[6], uint8_t nunchuck_unlock_codes[2],
+                    uint8_t data_converted[1], int chuck_delay){
+
+    I2C_SendData(I2C1, nunchuck_address, data_converted, 1);
+    delay_us(chuck_delay);
+    uint8_t* nun_data = I2C_ReceiveData(I2C1, nunchuck_address, data_received, 6);
+    
+    //Xor with 0x17 and + to each byte 0x17 to decode to nunchuck data
+    for (int i = 0; i < 6; i++){
+        nun_data[i] = nun_data[i] ^ 0x17; //XOR all nun_data with 0x17
+    }
+    for (int i = 0; i < 6; i++){
+        nun_data[i] = nun_data[i] + 0x17; //ADD all nun_data with 0x17
+    }
+
+    vals[0] = nun_data[0];
+    vals[1] = nun_data[1];
+    vals[2] = nun_data[2];
+    vals[3] = nun_data[3];
+    vals[4] = ~((nun_data[5] & 0x2) / 2);
+    vals[5] = ~((nun_data[5] & 0x1));
+
+}
+
+
+
+
+
+
+
+void nunchuck_uart_test(uint8_t data_received[6], uint8_t nunchuck_unlock_codes[2], uint8_t data_converted[1], int chuck_delay){
+        
+    I2C_SendData(I2C1, nunchuck_address, data_converted, 1);
+    delay_ms(chuck_delay);
+    uint8_t* nun_data = I2C_ReceiveData(I2C1, nunchuck_address, data_received, 6);
+    
+    //Xor with 0x17 + 0x17
+    for (int i = 0; i < 6; i++){
+        nun_data[i] = nun_data[i] ^ 0x17; //XOR all nun_data with 0x17
+    }
+    for (int i = 0; i < 6; i++){
+        nun_data[i] = nun_data[i] + 0x17; //ADD all nun_data with 0x17
+    }
+
+    int x_val = nun_data[0];
+    int y_val = nun_data[1];
+    int c = (nun_data[5] & 0x2) / 2;
+    int z = (nun_data[5] & 0x1);
+
+    
+    //convert all integers to strings/characters
+    char xVals[3];
+    char yVals[3];
+    char cChar;
+    char zChar;
+
+    
+    uint8_t xhundreds = x_val / 100; //isolate the hundreds place
+    uint8_t xtens = (x_val % 100) / 10; //isolate the tens place
+    uint8_t xones = (x_val % 100) % 10; //isolate the ones place
+    //pass converted values into the string
+    xVals[0]  = xhundreds + '0';
+    xVals[1]  = xtens + '0';
+    xVals[2]  = xones + '0';
+
+    uint8_t yhundreds = y_val / 100; //isolate the hundreds place
+    uint8_t ytens = (y_val % 100) / 10; //isolate the tens place
+    uint8_t yones = (y_val % 100) % 10; //isolate the ones place
+    //pass converted values into the string
+    yVals[0]  = yhundreds + '0';
+    yVals[1]  = ytens + '0';
+    yVals[2]  = yones + '0';
+
+    cChar = c + '0';
+    zChar = z + '0';
+
+    // USART_Write(USART2, (uint8_t *)"\xlb[2J", 6);
+    USART_Write(USART2, (uint8_t *) xVals, 3);
+    USART_Write(USART2, (uint8_t *) " ", 1);
+
+    USART_Write(USART2, (uint8_t *) yVals, 3);
+    USART_Write(USART2, (uint8_t *) " ", 1);
+
+    USART_Write(USART2, (uint8_t *) &cChar, 1);
+    USART_Write(USART2, (uint8_t *) " ", 1);
+
+    USART_Write(USART2, (uint8_t *) &zChar, 1);
+
+    USART_Write(USART2, (uint8_t *) "\t\r", 2);
+}

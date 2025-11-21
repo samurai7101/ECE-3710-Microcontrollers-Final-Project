@@ -1,0 +1,7 @@
+../Core/Src/pong.c:45:6:delay_ms	16	static
+../Core/Src/pong.c:50:6:read_button	16	static
+../Core/Src/pong.c:55:6:drawCourt	16	static
+../Core/Src/pong.c:60:6:drawGame	24	static
+../Core/Src/pong.c:89:6:resetGame	4	static
+../Core/Src/pong.c:102:6:pong_loop	32	static
+../Core/Src/pong.c:189:6:pong_setup	16	static

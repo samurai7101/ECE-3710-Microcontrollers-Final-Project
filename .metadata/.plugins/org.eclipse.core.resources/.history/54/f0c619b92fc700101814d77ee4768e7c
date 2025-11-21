@@ -1,0 +1,51 @@
+/* nunchuck.c */
+#include "nunchuck.h"
+#include <stdio.h>
+
+// Nunchuck I2C Address (0x52 << 1 for HAL 8-bit address)
+#define NUNCHUCK_ADDR (0x52 << 1)
+
+// External handle from main.c
+extern I2C_HandleTypeDef hi2c2;
+
+void nunchuck_init(void) {
+    uint8_t init1[] = {0xF0, 0x55};
+    uint8_t init2[] = {0xFB, 0x00};
+
+    // 1. Send initialization sequence 1
+    HAL_I2C_Master_Transmit(&hi2c2, NUNCHUCK_ADDR, init1, 2, HAL_MAX_DELAY);
+    HAL_Delay(10);
+
+    // 2. Send initialization sequence 2
+    HAL_I2C_Master_Transmit(&hi2c2, NUNCHUCK_ADDR, init2, 2, HAL_MAX_DELAY);
+    HAL_Delay(10);
+}
+
+nunchuck_t nunchuck_read(void) {
+    nunchuck_t data = {0};
+    uint8_t raw_data[6];
+    uint8_t cmd = 0x00;
+
+    // 1. Send write address 0x00 to request data
+    if(HAL_I2C_Master_Transmit(&hi2c2, NUNCHUCK_ADDR, &cmd, 1, 10) != HAL_OK) {
+        return data; // Return empty if I2C fails
+    }
+
+    // 2. Wait for conversion
+    HAL_Delay(2); // Short delay required by Nunchuck
+
+    // 3. Read 6 bytes of data
+    if(HAL_I2C_Master_Receive(&hi2c2, NUNCHUCK_ADDR, raw_data, 6, 10) == HAL_OK) {
+        
+        // Data mapping (Standard Nunchuck format)
+        data.joy_x = raw_data[0];
+        data.joy_y = raw_data[1];
+        data.accel_x = (raw_data[2] << 2) | ((raw_data[5] >> 2) & 0x03);
+        data.accel_y = (raw_data[3] << 2) | ((raw_data[5] >> 4) & 0x03);
+        data.accel_z = (raw_data[4] << 2) | ((raw_data[5] >> 6) & 0x03);
+        data.z_btn = !((raw_data[5] >> 0) & 0x01); // Active Low
+        data.c_btn = !((raw_data[5] >> 1) & 0x01); // Active Low
+    }
+
+    return data;
+}

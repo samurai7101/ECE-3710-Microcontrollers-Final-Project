@@ -1,0 +1,10 @@
+16:33:31 **** Incremental Build of configuration Debug for project Pong ****
+make -j22 all 
+arm-none-eabi-size  Pong.elf 
+   text	   data	    bss	    dec	    hex	filename
+  26376	    100	   3252	  29728	   7420	Pong.elf
+Finished building: default.size.stdout
+ 
+
+16:33:32 Build Finished. 0 errors, 0 warnings. (took 183ms)
+

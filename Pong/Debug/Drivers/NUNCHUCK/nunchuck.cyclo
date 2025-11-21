@@ -1,0 +1,2 @@
+../Drivers/NUNCHUCK/nunchuck.c:6:6:nunchuck_init	1
+../Drivers/NUNCHUCK/nunchuck.c:20:12:nunchuck_read	4
