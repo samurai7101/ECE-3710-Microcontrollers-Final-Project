@@ -32,13 +32,24 @@ uint8_t player_y = 16;
 
 void delay_ms(uint32_t ms) { HAL_Delay(ms); }
 
-// --- Tone Functions (Same as before) ---
-void tone(uint16_t frequency, uint16_t duration) {
-    for(uint16_t i = 0; i < duration; i++) {
+void buzzer(uint16_t freq){
+	for(int i =0; i < freq; i++){
+		buzzpulse();
+		delay_ms(20);
+	}
+}
+void buzzpulse(){
         HAL_GPIO_WritePin(BUZZER_GPIO_Port, BUZZER_Pin, GPIO_PIN_SET);
         delay_ms(1);
         HAL_GPIO_WritePin(BUZZER_GPIO_Port, BUZZER_Pin, GPIO_PIN_RESET);
         delay_ms(1);
+}
+
+
+// --- Tone Functions (Same as before) ---
+void tone(uint16_t frequency, uint16_t duration) {
+    for(uint16_t i = 0; i < duration; i++) {
+        buzzer(frequency);
     }
 }
 void noTone(void) { HAL_GPIO_WritePin(BUZZER_GPIO_Port, BUZZER_Pin, GPIO_PIN_RESET); }
