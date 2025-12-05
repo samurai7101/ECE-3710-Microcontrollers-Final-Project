@@ -1,0 +1,7 @@
+../Core/Src/pong.c:45:6:delay_ms	1
+../Core/Src/pong.c:50:6:read_button	1
+../Core/Src/pong.c:55:6:drawCourt	1
+../Core/Src/pong.c:60:6:drawGame	2
+../Core/Src/pong.c:89:6:resetGame	1
+../Core/Src/pong.c:102:6:pong_loop	27
+../Core/Src/pong.c:189:6:pong_setup	1

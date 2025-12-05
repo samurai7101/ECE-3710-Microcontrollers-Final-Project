@@ -88,3 +88,1145 @@ arm-none-eabi-size  Pong.elf
   26376	    100	   3252	  29728	   7420	Pong.elf
 Finished building: default.size.stdout
  
+12:19:26 **** Build of configuration Debug for project Pong ****
+make -j22 all 
+arm-none-eabi-gcc "../Core/Src/pong.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I"C:/Users/austi/Documents/USU/junor year/microcontrollers/FInal Project/Pong/Drivers/OLED" -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/austi/Documents/USU/junor year/microcontrollers/FInal Project/Pong/Drivers/NUNCHUCK" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/pong.d" -MT"Core/Src/pong.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/pong.o"
+../Core/Src/pong.c:14: warning: "PADDLE_RATE" redefined
+   14 | #define PADDLE_RATE 20
+      | 
+In file included from ../Core/Src/pong.c:8:
+../Core/Inc/pong.h:26: note: this is the location of the previous definition
+   26 | #define PADDLE_RATE        64
+      | 
+arm-none-eabi-gcc -o "Pong.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\austi\Documents\USU\junor year\microcontrollers\FInal Project\Pong\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Pong.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Pong.elf
+ 
+arm-none-eabi-size  Pong.elf 
+arm-none-eabi-objdump -h -S Pong.elf  > "Pong.list"
+   text	   data	    bss	    dec	    hex	filename
+  26376	    100	   3252	  29728	   7420	Pong.elf
+Finished building: default.size.stdout
+ 
+Finished building: Pong.list
+ 
+12:20:02 **** Incremental Build of configuration Debug for project Pong ****
+make -j22 all 
+arm-none-eabi-size  Pong.elf 
+   text	   data	    bss	    dec	    hex	filename
+  26376	    100	   3252	  29728	   7420	Pong.elf
+Finished building: default.size.stdout
+ 
+12:27:37 **** Incremental Build of configuration Debug for project Pong ****
+make -j22 all 
+arm-none-eabi-gcc "../Core/Src/pong.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I"C:/Users/austi/Documents/USU/junor year/microcontrollers/FInal Project/Pong/Drivers/OLED" -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/austi/Documents/USU/junor year/microcontrollers/FInal Project/Pong/Drivers/NUNCHUCK" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/pong.d" -MT"Core/Src/pong.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/pong.o"
+../Core/Src/pong.c:14: warning: "PADDLE_RATE" redefined
+   14 | #define PADDLE_RATE 20
+      | 
+In file included from ../Core/Src/pong.c:8:
+../Core/Inc/pong.h:26: note: this is the location of the previous definition
+   26 | #define PADDLE_RATE        64
+      | 
+arm-none-eabi-gcc -o "Pong.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\austi\Documents\USU\junor year\microcontrollers\FInal Project\Pong\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Pong.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Pong.elf
+ 
+arm-none-eabi-size  Pong.elf 
+arm-none-eabi-objdump -h -S Pong.elf  > "Pong.list"
+   text	   data	    bss	    dec	    hex	filename
+  26376	    100	   3252	  29728	   7420	Pong.elf
+Finished building: default.size.stdout
+ 
+Finished building: Pong.list
+ 
+12:27:50 **** Incremental Build of configuration Debug for project Pong ****
+make -j22 all 
+arm-none-eabi-size  Pong.elf 
+   text	   data	    bss	    dec	    hex	filename
+  26376	    100	   3252	  29728	   7420	Pong.elf
+Finished building: default.size.stdout
+ 
+12:29:50 **** Incremental Build of configuration Debug for project Pong ****
+make -j22 all 
+arm-none-eabi-gcc "../Core/Src/pong.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I"C:/Users/austi/Documents/USU/junor year/microcontrollers/FInal Project/Pong/Drivers/OLED" -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/austi/Documents/USU/junor year/microcontrollers/FInal Project/Pong/Drivers/NUNCHUCK" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/pong.d" -MT"Core/Src/pong.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/pong.o"
+../Core/Src/pong.c:14: warning: "PADDLE_RATE" redefined
+   14 | #define PADDLE_RATE 20
+      | 
+In file included from ../Core/Src/pong.c:8:
+../Core/Inc/pong.h:26: note: this is the location of the previous definition
+   26 | #define PADDLE_RATE        64
+      | 
+arm-none-eabi-gcc -o "Pong.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\austi\Documents\USU\junor year\microcontrollers\FInal Project\Pong\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Pong.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Pong.elf
+ 
+arm-none-eabi-size  Pong.elf 
+arm-none-eabi-objdump -h -S Pong.elf  > "Pong.list"
+   text	   data	    bss	    dec	    hex	filename
+  26376	    100	   3252	  29728	   7420	Pong.elf
+Finished building: default.size.stdout
+ 
+Finished building: Pong.list
+ 
+12:30:24 **** Incremental Build of configuration Debug for project Pong ****
+make -j22 all 
+arm-none-eabi-size  Pong.elf 
+   text	   data	    bss	    dec	    hex	filename
+  26376	    100	   3252	  29728	   7420	Pong.elf
+Finished building: default.size.stdout
+ 
+12:30:30 **** Incremental Build of configuration Debug for project Pong ****
+make -j22 all 
+arm-none-eabi-size  Pong.elf 
+   text	   data	    bss	    dec	    hex	filename
+  26376	    100	   3252	  29728	   7420	Pong.elf
+Finished building: default.size.stdout
+ 
+12:30:53 **** Incremental Build of configuration Debug for project Pong ****
+make -j22 all 
+arm-none-eabi-gcc "../Core/Src/pong.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I"C:/Users/austi/Documents/USU/junor year/microcontrollers/FInal Project/Pong/Drivers/OLED" -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/austi/Documents/USU/junor year/microcontrollers/FInal Project/Pong/Drivers/NUNCHUCK" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/pong.d" -MT"Core/Src/pong.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/pong.o"
+../Core/Src/pong.c:14: warning: "PADDLE_RATE" redefined
+   14 | #define PADDLE_RATE 20
+      | 
+In file included from ../Core/Src/pong.c:8:
+../Core/Inc/pong.h:26: note: this is the location of the previous definition
+   26 | #define PADDLE_RATE        64
+      | 
+arm-none-eabi-gcc -o "Pong.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\austi\Documents\USU\junor year\microcontrollers\FInal Project\Pong\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Pong.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Pong.elf
+ 
+arm-none-eabi-size  Pong.elf 
+arm-none-eabi-objdump -h -S Pong.elf  > "Pong.list"
+   text	   data	    bss	    dec	    hex	filename
+  26376	    100	   3252	  29728	   7420	Pong.elf
+Finished building: default.size.stdout
+ 
+Finished building: Pong.list
+ 
+12:30:58 **** Incremental Build of configuration Debug for project Pong ****
+make -j22 all 
+arm-none-eabi-size  Pong.elf 
+   text	   data	    bss	    dec	    hex	filename
+  26376	    100	   3252	  29728	   7420	Pong.elf
+Finished building: default.size.stdout
+ 
+12:31:12 **** Incremental Build of configuration Debug for project Pong ****
+make -j22 all 
+arm-none-eabi-gcc "../Core/Src/pong.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I"C:/Users/austi/Documents/USU/junor year/microcontrollers/FInal Project/Pong/Drivers/OLED" -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/austi/Documents/USU/junor year/microcontrollers/FInal Project/Pong/Drivers/NUNCHUCK" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/pong.d" -MT"Core/Src/pong.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/pong.o"
+../Core/Src/pong.c:14: warning: "PADDLE_RATE" redefined
+   14 | #define PADDLE_RATE 20
+      | 
+In file included from ../Core/Src/pong.c:8:
+../Core/Inc/pong.h:26: note: this is the location of the previous definition
+   26 | #define PADDLE_RATE        64
+      | 
+arm-none-eabi-gcc -o "Pong.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\austi\Documents\USU\junor year\microcontrollers\FInal Project\Pong\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Pong.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Pong.elf
+ 
+arm-none-eabi-size  Pong.elf 
+arm-none-eabi-objdump -h -S Pong.elf  > "Pong.list"
+   text	   data	    bss	    dec	    hex	filename
+  26376	    100	   3252	  29728	   7420	Pong.elf
+Finished building: default.size.stdout
+ 
+Finished building: Pong.list
+ 
+12:32:13 **** Incremental Build of configuration Debug for project Pong ****
+make -j22 all 
+arm-none-eabi-size  Pong.elf 
+   text	   data	    bss	    dec	    hex	filename
+  26376	    100	   3252	  29728	   7420	Pong.elf
+Finished building: default.size.stdout
+ 
+12:32:42 **** Incremental Build of configuration Debug for project Pong ****
+make -j22 all 
+arm-none-eabi-gcc "../Core/Src/pong.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I"C:/Users/austi/Documents/USU/junor year/microcontrollers/FInal Project/Pong/Drivers/OLED" -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/austi/Documents/USU/junor year/microcontrollers/FInal Project/Pong/Drivers/NUNCHUCK" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/pong.d" -MT"Core/Src/pong.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/pong.o"
+../Core/Src/pong.c:14: warning: "PADDLE_RATE" redefined
+   14 | #define PADDLE_RATE 20
+      | 
+In file included from ../Core/Src/pong.c:8:
+../Core/Inc/pong.h:26: note: this is the location of the previous definition
+   26 | #define PADDLE_RATE        64
+      | 
+arm-none-eabi-gcc -o "Pong.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\austi\Documents\USU\junor year\microcontrollers\FInal Project\Pong\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Pong.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Pong.elf
+ 
+arm-none-eabi-size  Pong.elf 
+arm-none-eabi-objdump -h -S Pong.elf  > "Pong.list"
+   text	   data	    bss	    dec	    hex	filename
+  26376	    100	   3252	  29728	   7420	Pong.elf
+Finished building: default.size.stdout
+ 
+Finished building: Pong.list
+ 
+12:32:44 **** Incremental Build of configuration Debug for project Pong ****
+make -j22 all 
+arm-none-eabi-size  Pong.elf 
+   text	   data	    bss	    dec	    hex	filename
+  26376	    100	   3252	  29728	   7420	Pong.elf
+Finished building: default.size.stdout
+ 
+12:32:56 **** Incremental Build of configuration Debug for project Pong ****
+make -j22 all 
+arm-none-eabi-gcc "../Core/Src/pong.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I"C:/Users/austi/Documents/USU/junor year/microcontrollers/FInal Project/Pong/Drivers/OLED" -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/austi/Documents/USU/junor year/microcontrollers/FInal Project/Pong/Drivers/NUNCHUCK" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/pong.d" -MT"Core/Src/pong.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/pong.o"
+../Core/Src/pong.c:14: warning: "PADDLE_RATE" redefined
+   14 | #define PADDLE_RATE 20
+      | 
+In file included from ../Core/Src/pong.c:8:
+../Core/Inc/pong.h:26: note: this is the location of the previous definition
+   26 | #define PADDLE_RATE        64
+      | 
+arm-none-eabi-gcc -o "Pong.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\austi\Documents\USU\junor year\microcontrollers\FInal Project\Pong\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Pong.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Pong.elf
+ 
+arm-none-eabi-size  Pong.elf 
+arm-none-eabi-objdump -h -S Pong.elf  > "Pong.list"
+   text	   data	    bss	    dec	    hex	filename
+  26376	    100	   3252	  29728	   7420	Pong.elf
+Finished building: default.size.stdout
+ 
+Finished building: Pong.list
+ 
+12:32:59 **** Incremental Build of configuration Debug for project Pong ****
+make -j22 all 
+arm-none-eabi-size  Pong.elf 
+   text	   data	    bss	    dec	    hex	filename
+  26376	    100	   3252	  29728	   7420	Pong.elf
+Finished building: default.size.stdout
+ 
+12:33:41 **** Incremental Build of configuration Debug for project Pong ****
+make -j22 all 
+arm-none-eabi-gcc "../Core/Src/pong.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I"C:/Users/austi/Documents/USU/junor year/microcontrollers/FInal Project/Pong/Drivers/OLED" -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/austi/Documents/USU/junor year/microcontrollers/FInal Project/Pong/Drivers/NUNCHUCK" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/pong.d" -MT"Core/Src/pong.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/pong.o"
+../Core/Src/pong.c:14: warning: "PADDLE_RATE" redefined
+   14 | #define PADDLE_RATE 20
+      | 
+In file included from ../Core/Src/pong.c:8:
+../Core/Inc/pong.h:26: note: this is the location of the previous definition
+   26 | #define PADDLE_RATE        64
+      | 
+arm-none-eabi-gcc -o "Pong.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\austi\Documents\USU\junor year\microcontrollers\FInal Project\Pong\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Pong.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Pong.elf
+ 
+arm-none-eabi-size  Pong.elf 
+arm-none-eabi-objdump -h -S Pong.elf  > "Pong.list"
+   text	   data	    bss	    dec	    hex	filename
+  26376	    100	   3252	  29728	   7420	Pong.elf
+Finished building: default.size.stdout
+ 
+Finished building: Pong.list
+ 
+12:33:44 **** Incremental Build of configuration Debug for project Pong ****
+make -j22 all 
+arm-none-eabi-size  Pong.elf 
+   text	   data	    bss	    dec	    hex	filename
+  26376	    100	   3252	  29728	   7420	Pong.elf
+Finished building: default.size.stdout
+ 
+12:34:21 **** Incremental Build of configuration Debug for project Pong ****
+make -j22 all 
+arm-none-eabi-gcc "../Core/Src/pong.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I"C:/Users/austi/Documents/USU/junor year/microcontrollers/FInal Project/Pong/Drivers/OLED" -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/austi/Documents/USU/junor year/microcontrollers/FInal Project/Pong/Drivers/NUNCHUCK" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/pong.d" -MT"Core/Src/pong.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/pong.o"
+../Core/Src/pong.c:14: warning: "PADDLE_RATE" redefined
+   14 | #define PADDLE_RATE 20
+      | 
+In file included from ../Core/Src/pong.c:8:
+../Core/Inc/pong.h:26: note: this is the location of the previous definition
+   26 | #define PADDLE_RATE        64
+      | 
+arm-none-eabi-gcc -o "Pong.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\austi\Documents\USU\junor year\microcontrollers\FInal Project\Pong\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Pong.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Pong.elf
+ 
+arm-none-eabi-size  Pong.elf 
+arm-none-eabi-objdump -h -S Pong.elf  > "Pong.list"
+   text	   data	    bss	    dec	    hex	filename
+  26376	    100	   3252	  29728	   7420	Pong.elf
+Finished building: default.size.stdout
+ 
+Finished building: Pong.list
+ 
+12:34:24 **** Incremental Build of configuration Debug for project Pong ****
+make -j22 all 
+arm-none-eabi-size  Pong.elf 
+   text	   data	    bss	    dec	    hex	filename
+  26376	    100	   3252	  29728	   7420	Pong.elf
+Finished building: default.size.stdout
+ 
+12:34:39 **** Incremental Build of configuration Debug for project Pong ****
+make -j22 all 
+arm-none-eabi-gcc "../Core/Src/pong.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I"C:/Users/austi/Documents/USU/junor year/microcontrollers/FInal Project/Pong/Drivers/OLED" -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/austi/Documents/USU/junor year/microcontrollers/FInal Project/Pong/Drivers/NUNCHUCK" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/pong.d" -MT"Core/Src/pong.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/pong.o"
+../Core/Src/pong.c:14: warning: "PADDLE_RATE" redefined
+   14 | #define PADDLE_RATE 20
+      | 
+In file included from ../Core/Src/pong.c:8:
+../Core/Inc/pong.h:26: note: this is the location of the previous definition
+   26 | #define PADDLE_RATE        64
+      | 
+arm-none-eabi-gcc -o "Pong.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\austi\Documents\USU\junor year\microcontrollers\FInal Project\Pong\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Pong.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Pong.elf
+ 
+arm-none-eabi-size  Pong.elf 
+arm-none-eabi-objdump -h -S Pong.elf  > "Pong.list"
+   text	   data	    bss	    dec	    hex	filename
+  26376	    100	   3252	  29728	   7420	Pong.elf
+Finished building: default.size.stdout
+ 
+Finished building: Pong.list
+ 
+12:34:47 **** Incremental Build of configuration Debug for project Pong ****
+make -j22 all 
+arm-none-eabi-size  Pong.elf 
+   text	   data	    bss	    dec	    hex	filename
+  26376	    100	   3252	  29728	   7420	Pong.elf
+Finished building: default.size.stdout
+ 
+12:42:09 **** Incremental Build of configuration Debug for project Pong ****
+make -j22 all 
+arm-none-eabi-gcc "../Core/Src/pong.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I"C:/Users/austi/Documents/USU/junor year/microcontrollers/FInal Project/Pong/Drivers/OLED" -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/austi/Documents/USU/junor year/microcontrollers/FInal Project/Pong/Drivers/NUNCHUCK" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/pong.d" -MT"Core/Src/pong.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/pong.o"
+../Core/Src/pong.c:14: warning: "PADDLE_RATE" redefined
+   14 | #define PADDLE_RATE 20
+      | 
+In file included from ../Core/Src/pong.c:8:
+../Core/Inc/pong.h:26: note: this is the location of the previous definition
+   26 | #define PADDLE_RATE        64
+      | 
+arm-none-eabi-gcc -o "Pong.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\austi\Documents\USU\junor year\microcontrollers\FInal Project\Pong\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Pong.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Pong.elf
+ 
+arm-none-eabi-size  Pong.elf 
+arm-none-eabi-objdump -h -S Pong.elf  > "Pong.list"
+   text	   data	    bss	    dec	    hex	filename
+  26376	    100	   3252	  29728	   7420	Pong.elf
+Finished building: default.size.stdout
+ 
+Finished building: Pong.list
+ 
+12:42:12 **** Incremental Build of configuration Debug for project Pong ****
+make -j22 all 
+arm-none-eabi-size  Pong.elf 
+   text	   data	    bss	    dec	    hex	filename
+  26376	    100	   3252	  29728	   7420	Pong.elf
+Finished building: default.size.stdout
+ 
+12:46:19 **** Incremental Build of configuration Debug for project Pong ****
+make -j22 all 
+arm-none-eabi-gcc "../Core/Src/pong.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I"C:/Users/austi/Documents/USU/junor year/microcontrollers/FInal Project/Pong/Drivers/OLED" -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/austi/Documents/USU/junor year/microcontrollers/FInal Project/Pong/Drivers/NUNCHUCK" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/pong.d" -MT"Core/Src/pong.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/pong.o"
+../Core/Src/pong.c:14: warning: "PADDLE_RATE" redefined
+   14 | #define PADDLE_RATE 20
+      | 
+In file included from ../Core/Src/pong.c:8:
+../Core/Inc/pong.h:26: note: this is the location of the previous definition
+   26 | #define PADDLE_RATE        64
+      | 
+arm-none-eabi-gcc -o "Pong.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\austi\Documents\USU\junor year\microcontrollers\FInal Project\Pong\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Pong.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Pong.elf
+ 
+arm-none-eabi-size  Pong.elf 
+arm-none-eabi-objdump -h -S Pong.elf  > "Pong.list"
+   text	   data	    bss	    dec	    hex	filename
+  26376	    100	   3252	  29728	   7420	Pong.elf
+Finished building: default.size.stdout
+ 
+Finished building: Pong.list
+ 
+12:46:22 **** Incremental Build of configuration Debug for project Pong ****
+make -j22 all 
+arm-none-eabi-size  Pong.elf 
+   text	   data	    bss	    dec	    hex	filename
+  26376	    100	   3252	  29728	   7420	Pong.elf
+Finished building: default.size.stdout
+ 
+13:31:56 **** Incremental Build of configuration Debug for project Pong ****
+make -j22 all 
+arm-none-eabi-gcc "../Drivers/NUNCHUCK/nunchuck.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I"C:/Users/austi/Documents/USU/junor year/microcontrollers/FInal Project/Pong/Drivers/OLED" -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/austi/Documents/USU/junor year/microcontrollers/FInal Project/Pong/Drivers/NUNCHUCK" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/NUNCHUCK/nunchuck.d" -MT"Drivers/NUNCHUCK/nunchuck.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/NUNCHUCK/nunchuck.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I"C:/Users/austi/Documents/USU/junor year/microcontrollers/FInal Project/Pong/Drivers/OLED" -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/austi/Documents/USU/junor year/microcontrollers/FInal Project/Pong/Drivers/NUNCHUCK" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/pong.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I"C:/Users/austi/Documents/USU/junor year/microcontrollers/FInal Project/Pong/Drivers/OLED" -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/austi/Documents/USU/junor year/microcontrollers/FInal Project/Pong/Drivers/NUNCHUCK" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/pong.d" -MT"Core/Src/pong.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/pong.o"
+arm-none-eabi-gcc "../Core/Src/stm32l4xx_hal_msp.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I"C:/Users/austi/Documents/USU/junor year/microcontrollers/FInal Project/Pong/Drivers/OLED" -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/austi/Documents/USU/junor year/microcontrollers/FInal Project/Pong/Drivers/NUNCHUCK" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32l4xx_hal_msp.d" -MT"Core/Src/stm32l4xx_hal_msp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32l4xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32l4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I"C:/Users/austi/Documents/USU/junor year/microcontrollers/FInal Project/Pong/Drivers/OLED" -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/austi/Documents/USU/junor year/microcontrollers/FInal Project/Pong/Drivers/NUNCHUCK" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32l4xx_it.d" -MT"Core/Src/stm32l4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32l4xx_it.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:99:3: warning: implicit declaration of function 'ssd1306_Init' [-Wimplicit-function-declaration]
+   99 |   ssd1306_Init();
+      |   ^~~~~~~~~~~~
+../Core/Src/main.c:102:3: warning: implicit declaration of function 'pong_setup' [-Wimplicit-function-declaration]
+  102 |   pong_setup();
+      |   ^~~~~~~~~~
+../Core/Src/pong.c:14: warning: "PADDLE_RATE" redefined
+   14 | #define PADDLE_RATE 20
+      | 
+In file included from ../Core/Src/pong.c:8:
+../Core/Inc/pong.h:26: note: this is the location of the previous definition
+   26 | #define PADDLE_RATE        64
+      | 
+../Core/Src/pong.c: In function 'buzzer':
+../Core/Src/pong.c:39:17: warning: implicit declaration of function 'buzzpulse' [-Wimplicit-function-declaration]
+   39 |                 buzzpulse();
+      |                 ^~~~~~~~~
+../Core/Src/pong.c: At top level:
+../Core/Src/pong.c:43:6: warning: conflicting types for 'buzzpulse'; have 'void()'
+   43 | void buzzpulse(){
+      |      ^~~~~~~~~
+../Core/Src/pong.c:39:17: note: previous implicit declaration of 'buzzpulse' with type 'void()'
+   39 |                 buzzpulse();
+      |                 ^~~~~~~~~
+arm-none-eabi-gcc -o "Pong.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\austi\Documents\USU\junor year\microcontrollers\FInal Project\Pong\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Pong.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Pong.elf
+ 
+arm-none-eabi-size  Pong.elf 
+arm-none-eabi-objdump -h -S Pong.elf  > "Pong.list"
+   text	   data	    bss	    dec	    hex	filename
+  19924	     20	   2908	  22852	   5944	Pong.elf
+Finished building: default.size.stdout
+ 
+Finished building: Pong.list
+ 
+13:32:04 **** Incremental Build of configuration Debug for project Pong ****
+make -j22 all 
+arm-none-eabi-size  Pong.elf 
+   text	   data	    bss	    dec	    hex	filename
+  19924	     20	   2908	  22852	   5944	Pong.elf
+Finished building: default.size.stdout
+ 
+13:32:56 **** Incremental Build of configuration Debug for project Pong ****
+make -j22 all 
+arm-none-eabi-gcc "../Core/Src/pong.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I"C:/Users/austi/Documents/USU/junor year/microcontrollers/FInal Project/Pong/Drivers/OLED" -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/austi/Documents/USU/junor year/microcontrollers/FInal Project/Pong/Drivers/NUNCHUCK" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/pong.d" -MT"Core/Src/pong.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/pong.o"
+../Core/Src/pong.c:14: warning: "PADDLE_RATE" redefined
+   14 | #define PADDLE_RATE 20
+      | 
+In file included from ../Core/Src/pong.c:8:
+../Core/Inc/pong.h:26: note: this is the location of the previous definition
+   26 | #define PADDLE_RATE        64
+      | 
+../Core/Src/pong.c: In function 'buzzer':
+../Core/Src/pong.c:39:17: warning: implicit declaration of function 'buzzpulse' [-Wimplicit-function-declaration]
+   39 |                 buzzpulse();
+      |                 ^~~~~~~~~
+../Core/Src/pong.c: At top level:
+../Core/Src/pong.c:42:6: warning: conflicting types for 'buzzpulse'; have 'void()'
+   42 | void buzzpulse(){
+      |      ^~~~~~~~~
+../Core/Src/pong.c:39:17: note: previous implicit declaration of 'buzzpulse' with type 'void()'
+   39 |                 buzzpulse();
+      |                 ^~~~~~~~~
+arm-none-eabi-gcc -o "Pong.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\austi\Documents\USU\junor year\microcontrollers\FInal Project\Pong\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Pong.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Pong.elf
+ 
+arm-none-eabi-size  Pong.elf 
+arm-none-eabi-objdump -h -S Pong.elf  > "Pong.list"
+   text	   data	    bss	    dec	    hex	filename
+  19920	     20	   2908	  22848	   5940	Pong.elf
+Finished building: default.size.stdout
+ 
+Finished building: Pong.list
+ 
+13:33:36 **** Incremental Build of configuration Debug for project Pong ****
+make -j22 all 
+arm-none-eabi-gcc "../Core/Src/pong.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I"C:/Users/austi/Documents/USU/junor year/microcontrollers/FInal Project/Pong/Drivers/OLED" -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/austi/Documents/USU/junor year/microcontrollers/FInal Project/Pong/Drivers/NUNCHUCK" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/pong.d" -MT"Core/Src/pong.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/pong.o"
+../Core/Src/pong.c:14: warning: "PADDLE_RATE" redefined
+   14 | #define PADDLE_RATE 20
+      | 
+In file included from ../Core/Src/pong.c:8:
+../Core/Inc/pong.h:26: note: this is the location of the previous definition
+   26 | #define PADDLE_RATE        64
+      | 
+arm-none-eabi-gcc -o "Pong.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\austi\Documents\USU\junor year\microcontrollers\FInal Project\Pong\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Pong.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Pong.elf
+ 
+arm-none-eabi-size  Pong.elf 
+arm-none-eabi-objdump -h -S Pong.elf  > "Pong.list"
+   text	   data	    bss	    dec	    hex	filename
+  19920	     20	   2908	  22848	   5940	Pong.elf
+Finished building: default.size.stdout
+ 
+Finished building: Pong.list
+ 
+13:34:27 **** Incremental Build of configuration Debug for project Pong ****
+make -j22 all 
+arm-none-eabi-gcc "../Core/Src/pong.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I"C:/Users/austi/Documents/USU/junor year/microcontrollers/FInal Project/Pong/Drivers/OLED" -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/austi/Documents/USU/junor year/microcontrollers/FInal Project/Pong/Drivers/NUNCHUCK" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/pong.d" -MT"Core/Src/pong.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/pong.o"
+arm-none-eabi-gcc -o "Pong.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\austi\Documents\USU\junor year\microcontrollers\FInal Project\Pong\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Pong.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Pong.elf
+ 
+arm-none-eabi-size  Pong.elf 
+arm-none-eabi-objdump -h -S Pong.elf  > "Pong.list"
+   text	   data	    bss	    dec	    hex	filename
+  19920	     20	   2908	  22848	   5940	Pong.elf
+Finished building: default.size.stdout
+ 
+Finished building: Pong.list
+ 
+13:34:49 **** Incremental Build of configuration Debug for project Pong ****
+make -j22 all 
+arm-none-eabi-size  Pong.elf 
+   text	   data	    bss	    dec	    hex	filename
+  19920	     20	   2908	  22848	   5940	Pong.elf
+Finished building: default.size.stdout
+ 
+13:35:35 **** Incremental Build of configuration Debug for project Pong ****
+make -j22 all 
+arm-none-eabi-gcc "../Core/Src/pong.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I"C:/Users/austi/Documents/USU/junor year/microcontrollers/FInal Project/Pong/Drivers/OLED" -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/austi/Documents/USU/junor year/microcontrollers/FInal Project/Pong/Drivers/NUNCHUCK" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/pong.d" -MT"Core/Src/pong.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/pong.o"
+arm-none-eabi-gcc -o "Pong.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\austi\Documents\USU\junor year\microcontrollers\FInal Project\Pong\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Pong.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Pong.elf
+ 
+arm-none-eabi-size  Pong.elf 
+arm-none-eabi-objdump -h -S Pong.elf  > "Pong.list"
+   text	   data	    bss	    dec	    hex	filename
+  19920	     20	   2908	  22848	   5940	Pong.elf
+Finished building: default.size.stdout
+ 
+Finished building: Pong.list
+ 
+13:35:49 **** Incremental Build of configuration Debug for project Pong ****
+make -j22 all 
+arm-none-eabi-size  Pong.elf 
+   text	   data	    bss	    dec	    hex	filename
+  19920	     20	   2908	  22848	   5940	Pong.elf
+Finished building: default.size.stdout
+ 
+13:36:37 **** Incremental Build of configuration Debug for project Pong ****
+make -j22 all 
+arm-none-eabi-gcc "../Core/Src/pong.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I"C:/Users/austi/Documents/USU/junor year/microcontrollers/FInal Project/Pong/Drivers/OLED" -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/austi/Documents/USU/junor year/microcontrollers/FInal Project/Pong/Drivers/NUNCHUCK" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/pong.d" -MT"Core/Src/pong.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/pong.o"
+arm-none-eabi-gcc -o "Pong.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\austi\Documents\USU\junor year\microcontrollers\FInal Project\Pong\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Pong.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Pong.elf
+ 
+arm-none-eabi-size  Pong.elf 
+arm-none-eabi-objdump -h -S Pong.elf  > "Pong.list"
+   text	   data	    bss	    dec	    hex	filename
+  19920	     20	   2908	  22848	   5940	Pong.elf
+Finished building: default.size.stdout
+ 
+Finished building: Pong.list
+ 
+13:36:46 **** Incremental Build of configuration Debug for project Pong ****
+make -j22 all 
+arm-none-eabi-size  Pong.elf 
+   text	   data	    bss	    dec	    hex	filename
+  19920	     20	   2908	  22848	   5940	Pong.elf
+Finished building: default.size.stdout
+ 
+13:41:21 **** Incremental Build of configuration Debug for project Pong ****
+make -j22 all 
+arm-none-eabi-gcc "../Core/Src/pong.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I"C:/Users/austi/Documents/USU/junor year/microcontrollers/FInal Project/Pong/Drivers/OLED" -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/austi/Documents/USU/junor year/microcontrollers/FInal Project/Pong/Drivers/NUNCHUCK" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/pong.d" -MT"Core/Src/pong.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/pong.o"
+arm-none-eabi-gcc -o "Pong.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\austi\Documents\USU\junor year\microcontrollers\FInal Project\Pong\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Pong.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Pong.elf
+ 
+arm-none-eabi-size  Pong.elf 
+arm-none-eabi-objdump -h -S Pong.elf  > "Pong.list"
+   text	   data	    bss	    dec	    hex	filename
+  19920	     20	   2908	  22848	   5940	Pong.elf
+Finished building: default.size.stdout
+ 
+Finished building: Pong.list
+ 
+13:41:31 **** Incremental Build of configuration Debug for project Pong ****
+make -j22 all 
+arm-none-eabi-size  Pong.elf 
+   text	   data	    bss	    dec	    hex	filename
+  19920	     20	   2908	  22848	   5940	Pong.elf
+Finished building: default.size.stdout
+ 
+13:42:18 **** Incremental Build of configuration Debug for project Pong ****
+make -j22 all 
+arm-none-eabi-gcc "../Core/Src/pong.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I"C:/Users/austi/Documents/USU/junor year/microcontrollers/FInal Project/Pong/Drivers/OLED" -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/austi/Documents/USU/junor year/microcontrollers/FInal Project/Pong/Drivers/NUNCHUCK" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/pong.d" -MT"Core/Src/pong.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/pong.o"
+arm-none-eabi-gcc -o "Pong.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\austi\Documents\USU\junor year\microcontrollers\FInal Project\Pong\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Pong.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Pong.elf
+ 
+arm-none-eabi-size  Pong.elf 
+arm-none-eabi-objdump -h -S Pong.elf  > "Pong.list"
+   text	   data	    bss	    dec	    hex	filename
+  19920	     20	   2908	  22848	   5940	Pong.elf
+Finished building: default.size.stdout
+ 
+Finished building: Pong.list
+ 
+13:42:20 **** Incremental Build of configuration Debug for project Pong ****
+make -j22 all 
+arm-none-eabi-size  Pong.elf 
+   text	   data	    bss	    dec	    hex	filename
+  19920	     20	   2908	  22848	   5940	Pong.elf
+Finished building: default.size.stdout
+ 
+13:42:40 **** Incremental Build of configuration Debug for project Pong ****
+make -j22 all 
+arm-none-eabi-gcc "../Core/Src/pong.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I"C:/Users/austi/Documents/USU/junor year/microcontrollers/FInal Project/Pong/Drivers/OLED" -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/austi/Documents/USU/junor year/microcontrollers/FInal Project/Pong/Drivers/NUNCHUCK" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/pong.d" -MT"Core/Src/pong.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/pong.o"
+arm-none-eabi-gcc -o "Pong.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\austi\Documents\USU\junor year\microcontrollers\FInal Project\Pong\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Pong.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Pong.elf
+ 
+arm-none-eabi-size  Pong.elf 
+arm-none-eabi-objdump -h -S Pong.elf  > "Pong.list"
+   text	   data	    bss	    dec	    hex	filename
+  19920	     20	   2908	  22848	   5940	Pong.elf
+Finished building: default.size.stdout
+ 
+Finished building: Pong.list
+ 
+13:42:43 **** Incremental Build of configuration Debug for project Pong ****
+make -j22 all 
+arm-none-eabi-size  Pong.elf 
+   text	   data	    bss	    dec	    hex	filename
+  19920	     20	   2908	  22848	   5940	Pong.elf
+Finished building: default.size.stdout
+ 
+13:44:27 **** Incremental Build of configuration Debug for project Pong ****
+make -j22 all 
+arm-none-eabi-gcc "../Core/Src/pong.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I"C:/Users/austi/Documents/USU/junor year/microcontrollers/FInal Project/Pong/Drivers/OLED" -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/austi/Documents/USU/junor year/microcontrollers/FInal Project/Pong/Drivers/NUNCHUCK" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/pong.d" -MT"Core/Src/pong.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/pong.o"
+arm-none-eabi-gcc -o "Pong.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\austi\Documents\USU\junor year\microcontrollers\FInal Project\Pong\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Pong.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Pong.elf
+ 
+arm-none-eabi-size  Pong.elf 
+arm-none-eabi-objdump -h -S Pong.elf  > "Pong.list"
+   text	   data	    bss	    dec	    hex	filename
+  19836	     20	   2908	  22764	   58ec	Pong.elf
+Finished building: default.size.stdout
+ 
+Finished building: Pong.list
+ 
+13:44:31 **** Incremental Build of configuration Debug for project Pong ****
+make -j22 all 
+arm-none-eabi-size  Pong.elf 
+   text	   data	    bss	    dec	    hex	filename
+  19836	     20	   2908	  22764	   58ec	Pong.elf
+Finished building: default.size.stdout
+ 
+13:45:52 **** Incremental Build of configuration Debug for project Pong ****
+make -j22 all 
+arm-none-eabi-gcc "../Core/Src/pong.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I"C:/Users/austi/Documents/USU/junor year/microcontrollers/FInal Project/Pong/Drivers/OLED" -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/austi/Documents/USU/junor year/microcontrollers/FInal Project/Pong/Drivers/NUNCHUCK" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/pong.d" -MT"Core/Src/pong.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/pong.o"
+../Core/Src/pong.c:14: warning: "PADDLE_RATE" redefined
+   14 | #define PADDLE_RATE 20
+      | 
+In file included from ../Core/Src/pong.c:8:
+../Core/Inc/pong.h:26: note: this is the location of the previous definition
+   26 | #define PADDLE_RATE        64
+      | 
+arm-none-eabi-gcc -o "Pong.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\austi\Documents\USU\junor year\microcontrollers\FInal Project\Pong\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Pong.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Pong.elf
+ 
+arm-none-eabi-size  Pong.elf 
+arm-none-eabi-objdump -h -S Pong.elf  > "Pong.list"
+   text	   data	    bss	    dec	    hex	filename
+  19860	     20	   2908	  22788	   5904	Pong.elf
+Finished building: default.size.stdout
+ 
+Finished building: Pong.list
+ 
+13:46:12 **** Incremental Build of configuration Debug for project Pong ****
+make -j22 all 
+arm-none-eabi-gcc "../Core/Src/pong.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I"C:/Users/austi/Documents/USU/junor year/microcontrollers/FInal Project/Pong/Drivers/OLED" -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/austi/Documents/USU/junor year/microcontrollers/FInal Project/Pong/Drivers/NUNCHUCK" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/pong.d" -MT"Core/Src/pong.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/pong.o"
+arm-none-eabi-gcc -o "Pong.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\austi\Documents\USU\junor year\microcontrollers\FInal Project\Pong\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Pong.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Pong.elf
+ 
+arm-none-eabi-size  Pong.elf 
+arm-none-eabi-objdump -h -S Pong.elf  > "Pong.list"
+   text	   data	    bss	    dec	    hex	filename
+  19860	     20	   2908	  22788	   5904	Pong.elf
+Finished building: default.size.stdout
+ 
+Finished building: Pong.list
+ 
+13:46:14 **** Incremental Build of configuration Debug for project Pong ****
+make -j22 all 
+arm-none-eabi-size  Pong.elf 
+   text	   data	    bss	    dec	    hex	filename
+  19860	     20	   2908	  22788	   5904	Pong.elf
+Finished building: default.size.stdout
+ 
+14:04:33 **** Build of configuration Debug for project Pong ****
+make -j22 all 
+arm-none-eabi-size  Pong.elf 
+   text	   data	    bss	    dec	    hex	filename
+  19860	     20	   2908	  22788	   5904	Pong.elf
+Finished building: default.size.stdout
+ 
+14:10:15 **** Incremental Build of configuration Debug for project Pong ****
+make -j22 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I"C:/Users/austi/Documents/USU/junor year/microcontrollers/FInal Project/Pong/Drivers/OLED" -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/austi/Documents/USU/junor year/microcontrollers/FInal Project/Pong/Drivers/NUNCHUCK" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:99:3: warning: implicit declaration of function 'ssd1306_Init' [-Wimplicit-function-declaration]
+   99 |   ssd1306_Init();
+      |   ^~~~~~~~~~~~
+../Core/Src/main.c:102:3: warning: implicit declaration of function 'pong_setup' [-Wimplicit-function-declaration]
+  102 |   pong_setup();
+      |   ^~~~~~~~~~
+../Core/Src/main.c:110:11: warning: implicit declaration of function 'pong_loop' [-Wimplicit-function-declaration]
+  110 |           pong_loop();
+      |           ^~~~~~~~~
+arm-none-eabi-gcc -o "Pong.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\austi\Documents\USU\junor year\microcontrollers\FInal Project\Pong\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Pong.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Pong.elf
+ 
+arm-none-eabi-size  Pong.elf 
+arm-none-eabi-objdump -h -S Pong.elf  > "Pong.list"
+   text	   data	    bss	    dec	    hex	filename
+  26304	    100	   3252	  29656	   73d8	Pong.elf
+Finished building: default.size.stdout
+ 
+Finished building: Pong.list
+ 
+14:11:48 **** Incremental Build of configuration Debug for project Pong ****
+make -j22 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I"C:/Users/austi/Documents/USU/junor year/microcontrollers/FInal Project/Pong/Drivers/OLED" -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/austi/Documents/USU/junor year/microcontrollers/FInal Project/Pong/Drivers/NUNCHUCK" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:98:3: warning: implicit declaration of function 'ssd1306_Init' [-Wimplicit-function-declaration]
+   98 |   ssd1306_Init();
+      |   ^~~~~~~~~~~~
+../Core/Src/main.c:101:3: warning: implicit declaration of function 'pong_setup' [-Wimplicit-function-declaration]
+  101 |   pong_setup();
+      |   ^~~~~~~~~~
+../Core/Src/main.c:109:11: warning: implicit declaration of function 'pong_loop' [-Wimplicit-function-declaration]
+  109 |           pong_loop();
+      |           ^~~~~~~~~
+../Core/Src/main.c: In function 'MX_GPIO_Init':
+../Core/Src/main.c:317:21: error: 'LD2_GPIO_Port' undeclared (first use in this function); did you mean 'SWO_GPIO_Port'?
+  317 |   HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin, GPIO_PIN_RESET);
+      |                     ^~~~~~~~~~~~~
+      |                     SWO_GPIO_Port
+../Core/Src/main.c:317:21: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:317:36: error: 'LD2_Pin' undeclared (first use in this function)
+  317 |   HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin, GPIO_PIN_RESET);
+      |                                    ^~~~~~~
+../Core/Src/main.c:320:25: error: 'B1_Pin' undeclared (first use in this function)
+  320 |   GPIO_InitStruct.Pin = B1_Pin;
+      |                         ^~~~~~
+../Core/Src/main.c:323:17: error: 'B1_GPIO_Port' undeclared (first use in this function); did you mean 'SWO_GPIO_Port'?
+  323 |   HAL_GPIO_Init(B1_GPIO_Port, &GPIO_InitStruct);
+      |                 ^~~~~~~~~~~~
+      |                 SWO_GPIO_Port
+make: *** [Core/Src/subdir.mk:37: Core/Src/main.o] Error 1
+"make -j22 all" terminated with exit code 2. Build might be incomplete.
+14:12:36 **** Incremental Build of configuration Debug for project Pong ****
+make -j22 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I"C:/Users/austi/Documents/USU/junor year/microcontrollers/FInal Project/Pong/Drivers/OLED" -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/austi/Documents/USU/junor year/microcontrollers/FInal Project/Pong/Drivers/NUNCHUCK" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:99:3: warning: implicit declaration of function 'ssd1306_Init' [-Wimplicit-function-declaration]
+   99 |   ssd1306_Init();
+      |   ^~~~~~~~~~~~
+../Core/Src/main.c:102:3: warning: implicit declaration of function 'pong_setup' [-Wimplicit-function-declaration]
+  102 |   pong_setup();
+      |   ^~~~~~~~~~
+../Core/Src/main.c:110:11: warning: implicit declaration of function 'pong_loop' [-Wimplicit-function-declaration]
+  110 |           pong_loop();
+      |           ^~~~~~~~~
+arm-none-eabi-gcc -o "Pong.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\austi\Documents\USU\junor year\microcontrollers\FInal Project\Pong\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Pong.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Pong.elf
+ 
+arm-none-eabi-size  Pong.elf 
+arm-none-eabi-objdump -h -S Pong.elf  > "Pong.list"
+   text	   data	    bss	    dec	    hex	filename
+  26304	    100	   3252	  29656	   73d8	Pong.elf
+Finished building: default.size.stdout
+ 
+Finished building: Pong.list
+ 
+14:13:07 **** Incremental Build of configuration Debug for project Pong ****
+make -j22 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I"C:/Users/austi/Documents/USU/junor year/microcontrollers/FInal Project/Pong/Drivers/OLED" -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/austi/Documents/USU/junor year/microcontrollers/FInal Project/Pong/Drivers/NUNCHUCK" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Pong.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\austi\Documents\USU\junor year\microcontrollers\FInal Project\Pong\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Pong.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Pong.elf
+ 
+arm-none-eabi-size  Pong.elf 
+arm-none-eabi-objdump -h -S Pong.elf  > "Pong.list"
+   text	   data	    bss	    dec	    hex	filename
+  26300	    100	   3252	  29652	   73d4	Pong.elf
+Finished building: default.size.stdout
+ 
+Finished building: Pong.list
+ 
+14:13:12 **** Incremental Build of configuration Debug for project Pong ****
+make -j22 all 
+arm-none-eabi-size  Pong.elf 
+   text	   data	    bss	    dec	    hex	filename
+  26300	    100	   3252	  29652	   73d4	Pong.elf
+Finished building: default.size.stdout
+ 
+14:46:15 **** Incremental Build of configuration Debug for project Pong ****
+make -j22 all 
+arm-none-eabi-gcc "../Drivers/NUNCHUCK/nunchuck.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I"C:/Users/austi/Documents/USU/junor year/microcontrollers/FInal Project/Pong/Drivers/OLED" -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/austi/Documents/USU/junor year/microcontrollers/FInal Project/Pong/Drivers/NUNCHUCK" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/NUNCHUCK/nunchuck.d" -MT"Drivers/NUNCHUCK/nunchuck.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/NUNCHUCK/nunchuck.o"
+arm-none-eabi-gcc "../Drivers/NUNCHUCK/nunchuck2.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I"C:/Users/austi/Documents/USU/junor year/microcontrollers/FInal Project/Pong/Drivers/OLED" -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/austi/Documents/USU/junor year/microcontrollers/FInal Project/Pong/Drivers/NUNCHUCK" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/NUNCHUCK/nunchuck2.d" -MT"Drivers/NUNCHUCK/nunchuck2.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/NUNCHUCK/nunchuck2.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I"C:/Users/austi/Documents/USU/junor year/microcontrollers/FInal Project/Pong/Drivers/OLED" -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/austi/Documents/USU/junor year/microcontrollers/FInal Project/Pong/Drivers/NUNCHUCK" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/pong.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I"C:/Users/austi/Documents/USU/junor year/microcontrollers/FInal Project/Pong/Drivers/OLED" -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/austi/Documents/USU/junor year/microcontrollers/FInal Project/Pong/Drivers/NUNCHUCK" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/pong.d" -MT"Core/Src/pong.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/pong.o"
+../Core/Src/main.c: In function 'MX_GPIO_Init':
+../Core/Src/main.c:318:39: error: 'LD2_Pin' undeclared (first use in this function)
+  318 |   HAL_GPIO_WritePin(GPIOA, BUZZER_Pin|LD2_Pin, GPIO_PIN_RESET);
+      |                                       ^~~~~~~
+../Core/Src/main.c:318:39: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:321:25: error: 'B1_Pin' undeclared (first use in this function)
+  321 |   GPIO_InitStruct.Pin = B1_Pin;
+      |                         ^~~~~~
+../Core/Src/main.c:324:17: error: 'B1_GPIO_Port' undeclared (first use in this function); did you mean 'SWO_GPIO_Port'?
+  324 |   HAL_GPIO_Init(B1_GPIO_Port, &GPIO_InitStruct);
+      |                 ^~~~~~~~~~~~
+      |                 SWO_GPIO_Port
+make: *** [Core/Src/subdir.mk:37: Core/Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+../Core/Src/pong.c:20: warning: "BUZZER_GPIO_Port" redefined
+   20 | #define BUZZER_GPIO_Port GPIOA
+      | 
+In file included from ../Core/Src/pong.c:8:
+../Core/Inc/main.h:61: note: this is the location of the previous definition
+   61 | #define BUZZER_GPIO_Port GPIOC
+      | 
+"make -j22 all" terminated with exit code 2. Build might be incomplete.
+14:47:58 **** Incremental Build of configuration Debug for project Pong ****
+make -j22 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I"C:/Users/austi/Documents/USU/junor year/microcontrollers/FInal Project/Pong/Drivers/OLED" -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/austi/Documents/USU/junor year/microcontrollers/FInal Project/Pong/Drivers/NUNCHUCK" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Pong.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\austi\Documents\USU\junor year\microcontrollers\FInal Project\Pong\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Pong.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Pong.elf
+ 
+arm-none-eabi-size  Pong.elf 
+arm-none-eabi-objdump -h -S Pong.elf  > "Pong.list"
+   text	   data	    bss	    dec	    hex	filename
+  25168	    100	   3252	  28520	   6f68	Pong.elf
+Finished building: default.size.stdout
+ 
+Finished building: Pong.list
+ 
+14:48:34 **** Incremental Build of configuration Debug for project Pong ****
+make -j22 all 
+arm-none-eabi-size  Pong.elf 
+   text	   data	    bss	    dec	    hex	filename
+  25168	    100	   3252	  28520	   6f68	Pong.elf
+Finished building: default.size.stdout
+ 
+14:50:34 **** Incremental Build of configuration Debug for project Pong ****
+make -j22 all 
+arm-none-eabi-size  Pong.elf 
+   text	   data	    bss	    dec	    hex	filename
+  25168	    100	   3252	  28520	   6f68	Pong.elf
+Finished building: default.size.stdout
+ 
+14:55:38 **** Incremental Build of configuration Debug for project Pong ****
+make -j22 all 
+arm-none-eabi-gcc "../Core/Src/pong.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I"C:/Users/austi/Documents/USU/junor year/microcontrollers/FInal Project/Pong/Drivers/OLED" -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/austi/Documents/USU/junor year/microcontrollers/FInal Project/Pong/Drivers/NUNCHUCK" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/pong.d" -MT"Core/Src/pong.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/pong.o"
+arm-none-eabi-gcc -o "Pong.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\austi\Documents\USU\junor year\microcontrollers\FInal Project\Pong\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Pong.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Pong.elf
+ 
+arm-none-eabi-size  Pong.elf 
+arm-none-eabi-objdump -h -S Pong.elf  > "Pong.list"
+   text	   data	    bss	    dec	    hex	filename
+  25188	    100	   3252	  28540	   6f7c	Pong.elf
+Finished building: default.size.stdout
+ 
+Finished building: Pong.list
+ 
+14:56:52 **** Incremental Build of configuration Debug for project Pong ****
+make -j22 all 
+arm-none-eabi-size  Pong.elf 
+   text	   data	    bss	    dec	    hex	filename
+  25188	    100	   3252	  28540	   6f7c	Pong.elf
+Finished building: default.size.stdout
+ 
+15:03:58 **** Incremental Build of configuration Debug for project Pong ****
+make -j22 all 
+arm-none-eabi-gcc "../Core/Src/pong.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I"C:/Users/austi/Documents/USU/junor year/microcontrollers/FInal Project/Pong/Drivers/OLED" -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/austi/Documents/USU/junor year/microcontrollers/FInal Project/Pong/Drivers/NUNCHUCK" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/pong.d" -MT"Core/Src/pong.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/pong.o"
+arm-none-eabi-gcc -o "Pong.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\austi\Documents\USU\junor year\microcontrollers\FInal Project\Pong\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Pong.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Pong.elf
+ 
+arm-none-eabi-size  Pong.elf 
+arm-none-eabi-objdump -h -S Pong.elf  > "Pong.list"
+   text	   data	    bss	    dec	    hex	filename
+  25148	    100	   3252	  28500	   6f54	Pong.elf
+Finished building: default.size.stdout
+ 
+Finished building: Pong.list
+ 
+15:04:02 **** Incremental Build of configuration Debug for project Pong ****
+make -j22 all 
+arm-none-eabi-size  Pong.elf 
+   text	   data	    bss	    dec	    hex	filename
+  25148	    100	   3252	  28500	   6f54	Pong.elf
+Finished building: default.size.stdout
+ 
+15:05:47 **** Incremental Build of configuration Debug for project Pong ****
+make -j22 all 
+arm-none-eabi-gcc "../Core/Src/pong.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I"C:/Users/austi/Documents/USU/junor year/microcontrollers/FInal Project/Pong/Drivers/OLED" -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/austi/Documents/USU/junor year/microcontrollers/FInal Project/Pong/Drivers/NUNCHUCK" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/pong.d" -MT"Core/Src/pong.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/pong.o"
+arm-none-eabi-gcc -o "Pong.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\austi\Documents\USU\junor year\microcontrollers\FInal Project\Pong\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Pong.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Pong.elf
+ 
+arm-none-eabi-size  Pong.elf 
+arm-none-eabi-objdump -h -S Pong.elf  > "Pong.list"
+   text	   data	    bss	    dec	    hex	filename
+  25188	    100	   3252	  28540	   6f7c	Pong.elf
+Finished building: default.size.stdout
+ 
+Finished building: Pong.list
+ 
+15:05:50 **** Incremental Build of configuration Debug for project Pong ****
+make -j22 all 
+arm-none-eabi-size  Pong.elf 
+   text	   data	    bss	    dec	    hex	filename
+  25188	    100	   3252	  28540	   6f7c	Pong.elf
+Finished building: default.size.stdout
+ 
+15:08:10 **** Incremental Build of configuration Debug for project Pong ****
+make -j22 all 
+arm-none-eabi-gcc "../Core/Src/pong.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I"C:/Users/austi/Documents/USU/junor year/microcontrollers/FInal Project/Pong/Drivers/OLED" -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/austi/Documents/USU/junor year/microcontrollers/FInal Project/Pong/Drivers/NUNCHUCK" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/pong.d" -MT"Core/Src/pong.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/pong.o"
+arm-none-eabi-gcc -o "Pong.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\austi\Documents\USU\junor year\microcontrollers\FInal Project\Pong\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Pong.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Pong.elf
+ 
+arm-none-eabi-size  Pong.elf 
+arm-none-eabi-objdump -h -S Pong.elf  > "Pong.list"
+   text	   data	    bss	    dec	    hex	filename
+  25352	    100	   3252	  28704	   7020	Pong.elf
+Finished building: default.size.stdout
+ 
+Finished building: Pong.list
+ 
+15:08:13 **** Incremental Build of configuration Debug for project Pong ****
+make -j22 all 
+arm-none-eabi-size  Pong.elf 
+   text	   data	    bss	    dec	    hex	filename
+  25352	    100	   3252	  28704	   7020	Pong.elf
+Finished building: default.size.stdout
+ 
+15:08:33 **** Incremental Build of configuration Debug for project Pong ****
+make -j22 all 
+arm-none-eabi-size  Pong.elf 
+   text	   data	    bss	    dec	    hex	filename
+  25352	    100	   3252	  28704	   7020	Pong.elf
+Finished building: default.size.stdout
+ 
+15:11:41 **** Incremental Build of configuration Debug for project Pong ****
+make -j22 all 
+arm-none-eabi-gcc "../Core/Src/pong.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I"C:/Users/austi/Documents/USU/junor year/microcontrollers/FInal Project/Pong/Drivers/OLED" -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/austi/Documents/USU/junor year/microcontrollers/FInal Project/Pong/Drivers/NUNCHUCK" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/pong.d" -MT"Core/Src/pong.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/pong.o"
+arm-none-eabi-gcc -o "Pong.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\austi\Documents\USU\junor year\microcontrollers\FInal Project\Pong\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Pong.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Pong.elf
+ 
+arm-none-eabi-size  Pong.elf 
+arm-none-eabi-objdump -h -S Pong.elf  > "Pong.list"
+   text	   data	    bss	    dec	    hex	filename
+  25188	    100	   3252	  28540	   6f7c	Pong.elf
+Finished building: default.size.stdout
+ 
+Finished building: Pong.list
+ 
+15:11:44 **** Incremental Build of configuration Debug for project Pong ****
+make -j22 all 
+arm-none-eabi-size  Pong.elf 
+   text	   data	    bss	    dec	    hex	filename
+  25188	    100	   3252	  28540	   6f7c	Pong.elf
+Finished building: default.size.stdout
+ 
+15:20:48 **** Incremental Build of configuration Debug for project Pong ****
+make -j22 all 
+arm-none-eabi-gcc "../Core/Src/pong.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I"C:/Users/austi/Documents/USU/junor year/microcontrollers/FInal Project/Pong/Drivers/OLED" -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/austi/Documents/USU/junor year/microcontrollers/FInal Project/Pong/Drivers/NUNCHUCK" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/pong.d" -MT"Core/Src/pong.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/pong.o"
+arm-none-eabi-gcc -o "Pong.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\austi\Documents\USU\junor year\microcontrollers\FInal Project\Pong\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Pong.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Pong.elf
+ 
+arm-none-eabi-size  Pong.elf 
+arm-none-eabi-objdump -h -S Pong.elf  > "Pong.list"
+   text	   data	    bss	    dec	    hex	filename
+  25208	    100	   3252	  28560	   6f90	Pong.elf
+Finished building: default.size.stdout
+ 
+Finished building: Pong.list
+ 
+15:20:51 **** Incremental Build of configuration Debug for project Pong ****
+make -j22 all 
+arm-none-eabi-size  Pong.elf 
+   text	   data	    bss	    dec	    hex	filename
+  25208	    100	   3252	  28560	   6f90	Pong.elf
+Finished building: default.size.stdout
+ 
+15:22:40 **** Incremental Build of configuration Debug for project Pong ****
+make -j22 all 
+arm-none-eabi-gcc "../Core/Src/pong.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I"C:/Users/austi/Documents/USU/junor year/microcontrollers/FInal Project/Pong/Drivers/OLED" -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/austi/Documents/USU/junor year/microcontrollers/FInal Project/Pong/Drivers/NUNCHUCK" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/pong.d" -MT"Core/Src/pong.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/pong.o"
+arm-none-eabi-gcc -o "Pong.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\austi\Documents\USU\junor year\microcontrollers\FInal Project\Pong\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Pong.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Pong.elf
+ 
+arm-none-eabi-size  Pong.elf 
+arm-none-eabi-objdump -h -S Pong.elf  > "Pong.list"
+   text	   data	    bss	    dec	    hex	filename
+  25208	    100	   3252	  28560	   6f90	Pong.elf
+Finished building: default.size.stdout
+ 
+Finished building: Pong.list
+ 
+15:22:43 **** Incremental Build of configuration Debug for project Pong ****
+make -j22 all 
+arm-none-eabi-size  Pong.elf 
+   text	   data	    bss	    dec	    hex	filename
+  25208	    100	   3252	  28560	   6f90	Pong.elf
+Finished building: default.size.stdout
+ 
+15:23:11 **** Incremental Build of configuration Debug for project Pong ****
+make -j22 all 
+arm-none-eabi-gcc "../Core/Src/pong.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I"C:/Users/austi/Documents/USU/junor year/microcontrollers/FInal Project/Pong/Drivers/OLED" -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/austi/Documents/USU/junor year/microcontrollers/FInal Project/Pong/Drivers/NUNCHUCK" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/pong.d" -MT"Core/Src/pong.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/pong.o"
+../Core/Src/pong.c:25: warning: "SCORE_LIMIT" redefined
+   25 | #define SCORE_LIMIT 1
+      | 
+In file included from ../Core/Src/pong.c:15:
+../Core/Inc/pong.h:27: note: this is the location of the previous definition
+   27 | #define SCORE_LIMIT        9
+      | 
+arm-none-eabi-gcc -o "Pong.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\austi\Documents\USU\junor year\microcontrollers\FInal Project\Pong\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Pong.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Pong.elf
+ 
+arm-none-eabi-size  Pong.elf 
+arm-none-eabi-objdump -h -S Pong.elf  > "Pong.list"
+   text	   data	    bss	    dec	    hex	filename
+  25208	    100	   3252	  28560	   6f90	Pong.elf
+Finished building: default.size.stdout
+ 
+Finished building: Pong.list
+ 
+15:23:28 **** Incremental Build of configuration Debug for project Pong ****
+make -j22 all 
+arm-none-eabi-size  Pong.elf 
+   text	   data	    bss	    dec	    hex	filename
+  25208	    100	   3252	  28560	   6f90	Pong.elf
+Finished building: default.size.stdout
+ 
+15:23:30 **** Incremental Build of configuration Debug for project Pong ****
+make -j22 all 
+arm-none-eabi-size  Pong.elf 
+   text	   data	    bss	    dec	    hex	filename
+  25208	    100	   3252	  28560	   6f90	Pong.elf
+Finished building: default.size.stdout
+ 
+15:28:55 **** Incremental Build of configuration Debug for project Pong ****
+make -j22 all 
+arm-none-eabi-gcc "../Core/Src/pong.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I"C:/Users/austi/Documents/USU/junor year/microcontrollers/FInal Project/Pong/Drivers/OLED" -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/austi/Documents/USU/junor year/microcontrollers/FInal Project/Pong/Drivers/NUNCHUCK" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/pong.d" -MT"Core/Src/pong.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/pong.o"
+arm-none-eabi-gcc -o "Pong.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\austi\Documents\USU\junor year\microcontrollers\FInal Project\Pong\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Pong.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Pong.elf
+ 
+arm-none-eabi-size  Pong.elf 
+arm-none-eabi-objdump -h -S Pong.elf  > "Pong.list"
+   text	   data	    bss	    dec	    hex	filename
+  25596	    104	   3256	  28956	   711c	Pong.elf
+Finished building: default.size.stdout
+ 
+Finished building: Pong.list
+ 
+15:29:00 **** Incremental Build of configuration Debug for project Pong ****
+make -j22 all 
+arm-none-eabi-size  Pong.elf 
+   text	   data	    bss	    dec	    hex	filename
+  25596	    104	   3256	  28956	   711c	Pong.elf
+Finished building: default.size.stdout
+ 
+15:29:54 **** Incremental Build of configuration Debug for project Pong ****
+make -j22 all 
+arm-none-eabi-gcc "../Core/Src/pong.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I"C:/Users/austi/Documents/USU/junor year/microcontrollers/FInal Project/Pong/Drivers/OLED" -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/austi/Documents/USU/junor year/microcontrollers/FInal Project/Pong/Drivers/NUNCHUCK" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/pong.d" -MT"Core/Src/pong.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/pong.o"
+../Core/Src/pong.c:25: warning: "SCORE_LIMIT" redefined
+   25 | #define SCORE_LIMIT 1
+      | 
+In file included from ../Core/Src/pong.c:15:
+../Core/Inc/pong.h:27: note: this is the location of the previous definition
+   27 | #define SCORE_LIMIT        9
+      | 
+arm-none-eabi-gcc -o "Pong.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\austi\Documents\USU\junor year\microcontrollers\FInal Project\Pong\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Pong.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Pong.elf
+ 
+arm-none-eabi-size  Pong.elf 
+arm-none-eabi-objdump -h -S Pong.elf  > "Pong.list"
+   text	   data	    bss	    dec	    hex	filename
+  25596	    104	   3256	  28956	   711c	Pong.elf
+Finished building: default.size.stdout
+ 
+Finished building: Pong.list
+ 
+15:30:03 **** Incremental Build of configuration Debug for project Pong ****
+make -j22 all 
+arm-none-eabi-size  Pong.elf 
+   text	   data	    bss	    dec	    hex	filename
+  25596	    104	   3256	  28956	   711c	Pong.elf
+Finished building: default.size.stdout
+ 
+15:31:32 **** Incremental Build of configuration Debug for project Pong ****
+make -j22 all 
+arm-none-eabi-gcc "../Core/Src/pong.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I"C:/Users/austi/Documents/USU/junor year/microcontrollers/FInal Project/Pong/Drivers/OLED" -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/austi/Documents/USU/junor year/microcontrollers/FInal Project/Pong/Drivers/NUNCHUCK" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/pong.d" -MT"Core/Src/pong.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/pong.o"
+../Core/Src/pong.c:25: warning: "SCORE_LIMIT" redefined
+   25 | #define SCORE_LIMIT 1
+      | 
+In file included from ../Core/Src/pong.c:15:
+../Core/Inc/pong.h:27: note: this is the location of the previous definition
+   27 | #define SCORE_LIMIT        9
+      | 
+arm-none-eabi-gcc -o "Pong.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\austi\Documents\USU\junor year\microcontrollers\FInal Project\Pong\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Pong.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Pong.elf
+ 
+arm-none-eabi-size  Pong.elf 
+arm-none-eabi-objdump -h -S Pong.elf  > "Pong.list"
+   text	   data	    bss	    dec	    hex	filename
+  25552	    104	   3256	  28912	   70f0	Pong.elf
+Finished building: default.size.stdout
+ 
+Finished building: Pong.list
+ 
+15:31:48 **** Incremental Build of configuration Debug for project Pong ****
+make -j22 all 
+arm-none-eabi-gcc "../Core/Src/pong.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I"C:/Users/austi/Documents/USU/junor year/microcontrollers/FInal Project/Pong/Drivers/OLED" -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/austi/Documents/USU/junor year/microcontrollers/FInal Project/Pong/Drivers/NUNCHUCK" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/pong.d" -MT"Core/Src/pong.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/pong.o"
+../Core/Src/pong.c:25: warning: "SCORE_LIMIT" redefined
+   25 | #define SCORE_LIMIT 1
+      | 
+In file included from ../Core/Src/pong.c:15:
+../Core/Inc/pong.h:27: note: this is the location of the previous definition
+   27 | #define SCORE_LIMIT        9
+      | 
+arm-none-eabi-gcc -o "Pong.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\austi\Documents\USU\junor year\microcontrollers\FInal Project\Pong\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Pong.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Pong.elf
+ 
+arm-none-eabi-size  Pong.elf 
+arm-none-eabi-objdump -h -S Pong.elf  > "Pong.list"
+   text	   data	    bss	    dec	    hex	filename
+  25552	    104	   3256	  28912	   70f0	Pong.elf
+Finished building: default.size.stdout
+ 
+Finished building: Pong.list
+ 
+15:32:04 **** Incremental Build of configuration Debug for project Pong ****
+make -j22 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I"C:/Users/austi/Documents/USU/junor year/microcontrollers/FInal Project/Pong/Drivers/OLED" -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/austi/Documents/USU/junor year/microcontrollers/FInal Project/Pong/Drivers/NUNCHUCK" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/pong.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I"C:/Users/austi/Documents/USU/junor year/microcontrollers/FInal Project/Pong/Drivers/OLED" -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/austi/Documents/USU/junor year/microcontrollers/FInal Project/Pong/Drivers/NUNCHUCK" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/pong.d" -MT"Core/Src/pong.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/pong.o"
+arm-none-eabi-gcc -o "Pong.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\austi\Documents\USU\junor year\microcontrollers\FInal Project\Pong\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Pong.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Pong.elf
+ 
+arm-none-eabi-size  Pong.elf 
+arm-none-eabi-objdump -h -S Pong.elf  > "Pong.list"
+   text	   data	    bss	    dec	    hex	filename
+  25552	    104	   3256	  28912	   70f0	Pong.elf
+Finished building: default.size.stdout
+ 
+Finished building: Pong.list
+ 
+15:32:07 **** Incremental Build of configuration Debug for project Pong ****
+make -j22 all 
+arm-none-eabi-size  Pong.elf 
+   text	   data	    bss	    dec	    hex	filename
+  25552	    104	   3256	  28912	   70f0	Pong.elf
+Finished building: default.size.stdout
+ 
+15:33:20 **** Incremental Build of configuration Debug for project Pong ****
+make -j22 all 
+arm-none-eabi-gcc "../Core/Src/pong.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I"C:/Users/austi/Documents/USU/junor year/microcontrollers/FInal Project/Pong/Drivers/OLED" -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/austi/Documents/USU/junor year/microcontrollers/FInal Project/Pong/Drivers/NUNCHUCK" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/pong.d" -MT"Core/Src/pong.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/pong.o"
+arm-none-eabi-gcc -o "Pong.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\austi\Documents\USU\junor year\microcontrollers\FInal Project\Pong\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Pong.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Pong.elf
+ 
+arm-none-eabi-size  Pong.elf 
+arm-none-eabi-objdump -h -S Pong.elf  > "Pong.list"
+   text	   data	    bss	    dec	    hex	filename
+  25552	    104	   3256	  28912	   70f0	Pong.elf
+Finished building: default.size.stdout
+ 
+Finished building: Pong.list
+ 
+15:33:23 **** Incremental Build of configuration Debug for project Pong ****
+make -j22 all 
+arm-none-eabi-size  Pong.elf 
+   text	   data	    bss	    dec	    hex	filename
+  25552	    104	   3256	  28912	   70f0	Pong.elf
+Finished building: default.size.stdout
+ 
+15:33:36 **** Incremental Build of configuration Debug for project Pong ****
+make -j22 all 
+arm-none-eabi-gcc "../Core/Src/pong.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I"C:/Users/austi/Documents/USU/junor year/microcontrollers/FInal Project/Pong/Drivers/OLED" -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/austi/Documents/USU/junor year/microcontrollers/FInal Project/Pong/Drivers/NUNCHUCK" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/pong.d" -MT"Core/Src/pong.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/pong.o"
+arm-none-eabi-gcc -o "Pong.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\austi\Documents\USU\junor year\microcontrollers\FInal Project\Pong\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Pong.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Pong.elf
+ 
+arm-none-eabi-size  Pong.elf 
+arm-none-eabi-objdump -h -S Pong.elf  > "Pong.list"
+   text	   data	    bss	    dec	    hex	filename
+  25552	    104	   3256	  28912	   70f0	Pong.elf
+Finished building: default.size.stdout
+ 
+Finished building: Pong.list
+ 
+15:33:39 **** Incremental Build of configuration Debug for project Pong ****
+make -j22 all 
+arm-none-eabi-size  Pong.elf 
+   text	   data	    bss	    dec	    hex	filename
+  25552	    104	   3256	  28912	   70f0	Pong.elf
+Finished building: default.size.stdout
+ 

@@ -33,7 +33,8 @@ Core/Src/pong.o: ../Core/Src/pong.c ../Core/Inc/main.h \
  C:/Users/austi/Documents/USU/junor\ year/microcontrollers/FInal\ Project/Pong/Drivers/OLED/ssd1306.h \
  ../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l476xx.h \
  ../Core/Inc/pong.h ../Core/Inc/main.h \
- C:/Users/austi/Documents/USU/junor\ year/microcontrollers/FInal\ Project/Pong/Drivers/NUNCHUCK/nunchuck.h
+ C:/Users/austi/Documents/USU/junor\ year/microcontrollers/FInal\ Project/Pong/Drivers/NUNCHUCK/nunchuck.h \
+ C:/Users/austi/Documents/USU/junor\ year/microcontrollers/FInal\ Project/Pong/Drivers/NUNCHUCK/nunchuck2.h
 ../Core/Inc/main.h:
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h:
 ../Core/Inc/stm32l4xx_hal_conf.h:
@@ -71,3 +72,4 @@ C:/Users/austi/Documents/USU/junor\ year/microcontrollers/FInal\ Project/Pong/Dr
 ../Core/Inc/pong.h:
 ../Core/Inc/main.h:
 C:/Users/austi/Documents/USU/junor\ year/microcontrollers/FInal\ Project/Pong/Drivers/NUNCHUCK/nunchuck.h:
+C:/Users/austi/Documents/USU/junor\ year/microcontrollers/FInal\ Project/Pong/Drivers/NUNCHUCK/nunchuck2.h:

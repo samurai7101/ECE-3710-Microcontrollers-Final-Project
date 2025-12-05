@@ -1,0 +1,306 @@
+/*
+ * pong.c (STM32 + SSD1306 I2C Version - Two Player Nunchuck)
+ * Author: Austin Herbst
+ * Date: Oct 29, 2025
+ * Modified: Two-player nunchuck support
+ */
+
+#include "main.h"
+#include "ssd1306.h"
+#include "ssd1306_fonts.h"
+#include "stm32l476xx.h"
+#include <stdbool.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include "pong.h"
+#include "nunchuck.h"
+#include "nunchuck2.h"
+
+// BUZZER_Pin and BUZZER_GPIO_Port are defined in main.h
+
+// Game parameters
+#define PADDLE_HEIGHT 12
+#define BALL_RATE 16
+#define PADDLE_RATE 64
+#define SCORE_LIMIT 9
+
+// Board parameters
+#define BOARD_SIZE_X 127
+#define BOARD_SIZE_Y 51
+
+// Joystick thresholds and deadzone
+// Both nunchucks have center at 174 (calibrated)
+#define P1_JOY_CENTER 174
+#define P1_JOY_DEADZONE 30
+#define P1_JOY_UP_THRESHOLD (P1_JOY_CENTER + P1_JOY_DEADZONE)   // > 204
+#define P1_JOY_DOWN_THRESHOLD (P1_JOY_CENTER - P1_JOY_DEADZONE) // < 144
+
+#define P2_JOY_CENTER 174
+#define P2_JOY_DEADZONE 30
+#define P2_JOY_UP_THRESHOLD (P2_JOY_CENTER + P2_JOY_DEADZONE)   // > 204
+#define P2_JOY_DOWN_THRESHOLD (P2_JOY_CENTER - P2_JOY_DEADZONE) // < 144
+
+// Game state variables
+bool game_over = false, win = false;
+uint8_t player1_score = 0, player2_score = 0;
+
+uint8_t ball_x = 53, ball_y = 26;
+int8_t ball_dir_x = 1, ball_dir_y = 1;
+
+uint32_t last_ball_update = 0;
+uint32_t last_paddle_update = 0;
+
+const uint8_t PLAYER1_X = 12;
+uint8_t player1_y = 16;
+
+const uint8_t PLAYER2_X = 115;
+uint8_t player2_y = 16;
+
+/* Delay in ms using HAL */
+void delay_ms(uint32_t ms) {
+    HAL_Delay(ms);
+}
+
+/* Buzzer tone functions - FIXED */
+void tone(uint16_t frequency, uint16_t duration) {
+    // Simple blocking tone generation
+    uint32_t period_us = 1000000 / frequency / 2; // Half period in microseconds
+    uint32_t cycles = (uint32_t)frequency * duration / 1000;
+
+    for(uint32_t i = 0; i < cycles; i++) {
+        HAL_GPIO_WritePin(BUZZER_GPIO_Port, BUZZER_Pin, GPIO_PIN_SET);
+        for(volatile uint32_t d = 0; d < period_us; d++); // Rough delay
+        HAL_GPIO_WritePin(BUZZER_GPIO_Port, BUZZER_Pin, GPIO_PIN_RESET);
+        for(volatile uint32_t d = 0; d < period_us; d++); // Rough delay
+    }
+}
+
+void noTone(void) {
+    HAL_GPIO_WritePin(BUZZER_GPIO_Port, BUZZER_Pin, GPIO_PIN_RESET);
+}
+
+void player1PaddleTone(void) {
+    tone(250, 50);
+    noTone();
+}
+
+void player2PaddleTone(void) {
+    tone(225, 50);
+    noTone();
+}
+
+void wallTone(void) {
+    tone(200, 50);
+    noTone();
+}
+
+void player1_scoreTone(void) {
+    tone(200, 100);
+    delay_ms(50);
+    tone(250, 100);
+    noTone();
+}
+
+void player2_scoreTone(void) {
+    tone(250, 100);
+    delay_ms(50);
+    tone(200, 100);
+    noTone();
+}
+
+/* Draw game border */
+void drawCourt(void) {
+    ssd1306_DrawRectangle(0, 0, BOARD_SIZE_X, BOARD_SIZE_Y, White);
+}
+
+/* Draw everything */
+void drawGame(void) {
+    ssd1306_Clear();
+
+    // Draw border
+    drawCourt();
+
+    // Draw ball
+    ssd1306_DrawPixel(ball_x, ball_y, White);
+
+    // Draw paddles
+    for (uint8_t i = 0; i < PADDLE_HEIGHT; i++) {
+        ssd1306_DrawPixel(PLAYER1_X, player1_y + i, White);
+        ssd1306_DrawPixel(PLAYER2_X, player2_y + i, White);
+    }
+
+    // Draw scores
+    ssd1306_SetCursor(0, BOARD_SIZE_Y + 5);
+    char buf[4];
+    sprintf(buf, "%d", player1_score);
+    ssd1306_WriteString(buf, Font_7x10, White);
+
+    ssd1306_SetCursor(BOARD_SIZE_X - 6, BOARD_SIZE_Y + 2);
+    sprintf(buf, "%d", player2_score);
+    ssd1306_WriteString(buf, Font_7x10, White);
+
+    ssd1306_UpdateScreen();
+}
+
+/* Reset game state */
+void resetGame(void) {
+    ball_x = 53;
+    ball_y = 26;
+    ball_dir_x = 1;
+    ball_dir_y = 1;
+    player1_y = 16;
+    player2_y = 16;
+    player1_score = 0;
+    player2_score = 0;
+    game_over = false;
+}
+
+/* One step of the game loop */
+void pong_loop(void) {
+    uint32_t now = HAL_GetTick();
+    bool update_needed = false;
+
+    // ---- Ball logic ----
+    if (now - last_ball_update > BALL_RATE) {
+        uint8_t new_x = ball_x + ball_dir_x;
+        uint8_t new_y = ball_y + ball_dir_y;
+
+        // Vertical walls (scoring)
+        if (new_x == 0 || new_x == BOARD_SIZE_X - 1) {
+            ball_dir_x = -ball_dir_x;
+            new_x += ball_dir_x + ball_dir_x;
+
+            if (new_x < 64) {
+                // Player 2 scored
+                player2_scoreTone();
+                player2_score++;
+            } else {
+                // Player 1 scored
+                player1_scoreTone();
+                player1_score++;
+            }
+
+            if (player1_score == SCORE_LIMIT || player2_score == SCORE_LIMIT) {
+                win = (player1_score > player2_score);
+                game_over = true;
+            }
+        }
+
+        // Horizontal walls
+        if (new_y == 0 || new_y == BOARD_SIZE_Y - 1) {
+            wallTone();
+            ball_dir_y = -ball_dir_y;
+            new_y += ball_dir_y + ball_dir_y;
+        }
+
+        // Player 1 paddle collision
+        if (new_x == PLAYER1_X && new_y >= player1_y && new_y <= player1_y + PADDLE_HEIGHT) {
+            player1PaddleTone();
+            ball_dir_x = -ball_dir_x;
+            new_x += ball_dir_x + ball_dir_x;
+        }
+
+        // Player 2 paddle collision
+        if (new_x == PLAYER2_X && new_y >= player2_y && new_y <= player2_y + PADDLE_HEIGHT) {
+            player2PaddleTone();
+            ball_dir_x = -ball_dir_x;
+            new_x += ball_dir_x + ball_dir_x;
+        }
+
+        ball_x = new_x;
+        ball_y = new_y;
+
+        last_ball_update = now;
+        update_needed = true;
+    }
+
+    // ---- Paddle logic - FIXED WITH CALIBRATED VALUES ----
+    if (now - last_paddle_update > PADDLE_RATE) {
+        last_paddle_update = now;
+
+        // Read nunchuck data
+        nunchuck_t nunchuck1 = nunchuck_read();
+        nunchuck2_t nunchuck2 = nunchuck2_read();
+
+        // Player 1 control (Left paddle - Nunchuck 1 on I2C2)
+        if (nunchuck1.joy_y > P1_JOY_UP_THRESHOLD) {
+            player1_y--; // Move paddle UP (decrease Y)
+        } else if (nunchuck1.joy_y < P1_JOY_DOWN_THRESHOLD) {
+            player1_y++; // Move paddle DOWN (increase Y)
+        }
+
+        // Constrain player 1 paddle
+        if (player1_y < 1) player1_y = 1;
+        if (player1_y + PADDLE_HEIGHT > BOARD_SIZE_Y - 1) player1_y = BOARD_SIZE_Y - 1 - PADDLE_HEIGHT;
+
+        // Player 2 control (Right paddle - Nunchuck 2 on I2C1)
+        // Using calibrated center point of 174
+        if (nunchuck2.joy_y > P2_JOY_UP_THRESHOLD) {
+            player2_y--; // Move paddle UP (decrease Y)
+        } else if (nunchuck2.joy_y < P2_JOY_DOWN_THRESHOLD) {
+            player2_y++; // Move paddle DOWN (increase Y)
+        }
+
+        // Constrain player 2 paddle
+        if (player2_y < 1) player2_y = 1;
+        if (player2_y + PADDLE_HEIGHT > BOARD_SIZE_Y - 1) player2_y = BOARD_SIZE_Y - 1 - PADDLE_HEIGHT;
+
+        update_needed = true;
+    }
+
+    // ---- Game over screen ----
+    if (update_needed) {
+        if (game_over) {
+            ssd1306_Clear();
+            ssd1306_SetCursor(20, 20);
+
+            if (win) {
+                ssd1306_WriteString("PLAYER 1", Font_7x10, White);
+                ssd1306_SetCursor(35, 35);
+                ssd1306_WriteString("WINS!", Font_7x10, White);
+            } else {
+                ssd1306_WriteString("PLAYER 2", Font_7x10, White);
+                ssd1306_SetCursor(35, 35);
+                ssd1306_WriteString("WINS!", Font_7x10, White);
+            }
+
+            ssd1306_UpdateScreen();
+
+            // Play victory/failure sound
+            if (win) {
+                player1_scoreTone();
+            } else {
+                player2_scoreTone();
+            }
+
+            HAL_Delay(3000);
+            resetGame();
+        }
+        drawGame();
+    }
+}
+
+/* Call this once at startup */
+void pong_setup(void) {
+    // Initialize buzzer pin
+    HAL_GPIO_WritePin(BUZZER_GPIO_Port, BUZZER_Pin, GPIO_PIN_RESET);
+
+    // Initialize both nunchucks
+    nunchuck_init();   // Player 1 on I2C2
+    nunchuck2_init();  // Player 2 on I2C1
+
+    ssd1306_Clear();
+    drawCourt();
+    ssd1306_SetCursor(10, 15);
+    ssd1306_WriteString("ECE-3710 FINAL PROJECT", Font_7x10, White);
+    ssd1306_SetCursor(10, 30);
+    ssd1306_WriteString("2-PLAYER PONG START", Font_7x10, White);
+    ssd1306_UpdateScreen();
+
+    // Play startup sound
+    tone(300, 200);
+    noTone();
+
+    HAL_Delay(1500);
+    resetGame();
+}

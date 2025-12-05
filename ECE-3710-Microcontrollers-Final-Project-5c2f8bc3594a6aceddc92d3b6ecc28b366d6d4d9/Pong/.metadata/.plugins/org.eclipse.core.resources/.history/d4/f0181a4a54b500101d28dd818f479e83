@@ -1,0 +1,28 @@
+#ifndef PONG_H
+#define PONG_H
+
+#include "stm32l476xx.h"
+
+extern int game_over;
+extern int win;
+extern int player_score;
+extern int mcu_score;
+extern int ball_x;
+extern int ball_y;
+extern int ball_dir_x;
+extern int ball_dir_y;
+extern uint32_t last_ball_update;
+extern uint32_t last_paddle_update;
+extern int MCU_X;
+extern int mcu_y;
+extern int PLAYER_X;
+extern int player_y;
+
+void delay_ms(unsigned int ms);
+void drawCourt(void);
+void drawGame(void);
+void resetGame(void);
+void pong_setup(void);
+void pong_loop(void);
+
+#endif

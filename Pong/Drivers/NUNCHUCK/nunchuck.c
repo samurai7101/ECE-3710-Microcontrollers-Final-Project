@@ -27,7 +27,7 @@ nunchuck_t nunchuck_read(void) {
         return state; // Return empty state if I2C fails
     }
 
-    // 2. Wait for conversion (Original code used a delay, HAL_Delay(2) is usually sufficient)
+    // 2. Wait for conversion
     HAL_Delay(2);
 
     // 3. Receive 6 bytes of data

@@ -1,0 +1,13 @@
+../Core/Src/pong.c:33:6:delay_ms	16	static
+../Core/Src/pong.c:36:6:tone	24	static
+../Core/Src/pong.c:44:6:noTone	8	static
+../Core/Src/pong.c:45:6:playerPaddleTone	8	static
+../Core/Src/pong.c:46:6:mcuPaddleTone	8	static
+../Core/Src/pong.c:47:6:wallTone	8	static
+../Core/Src/pong.c:48:6:player_scoreTone	8	static
+../Core/Src/pong.c:49:6:mcu_scoreTone	8	static
+../Core/Src/pong.c:51:6:drawCourt	16	static
+../Core/Src/pong.c:53:6:drawGame	24	static
+../Core/Src/pong.c:75:6:resetGame	4	static
+../Core/Src/pong.c:81:6:pong_loop	40	static
+../Core/Src/pong.c:170:6:pong_setup	16	static

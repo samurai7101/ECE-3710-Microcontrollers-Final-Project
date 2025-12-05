@@ -1,0 +1,147 @@
+/**
+  ******************************************************************************
+  * @file    pong.h
+  * @author  Austin Herbst
+  * @brief   Header file for Pong game implementation on STM32 with SSD1306
+  ******************************************************************************
+  */
+
+#ifndef PONG_H
+#define PONG_H
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+/* Includes ------------------------------------------------------------------*/
+#include "main.h"
+#include "ssd1306.h"
+#include "ssd1306_fonts.h"
+#include <stdbool.h>
+#include <stdint.h>
+
+/* Game Constants ------------------------------------------------------------*/
+#define PADDLE_HEIGHT      12
+#define BALL_RATE          16
+#define PADDLE_RATE        64
+#define SCORE_LIMIT        9
+
+/* Hardware Definitions ------------------------------------------------------*/
+// Use the definitions from main.h instead of redefining them
+#define UP_BUTTON_Pin      BUTTON_UP_Pin
+#define UP_BUTTON_GPIO_Port BUTTON_UP_GPIO_Port
+#define DOWN_BUTTON_Pin    BUTTON_DN_Pin
+#define DOWN_BUTTON_GPIO_Port BUTTON_DN_GPIO_Port
+
+/* Global Variables ----------------------------------------------------------*/
+extern bool game_over;
+extern bool win;
+extern uint8_t player_score;
+extern uint8_t mcu_score;
+extern uint8_t ball_x;
+extern uint8_t ball_y;
+extern int8_t ball_dir_x;
+extern int8_t ball_dir_y;
+extern uint32_t last_ball_update;
+extern uint32_t last_paddle_update;
+extern uint8_t mcu_y;
+extern uint8_t player_y;
+extern const uint8_t MCU_X;
+extern const uint8_t PLAYER_X;
+
+/* Function Prototypes -------------------------------------------------------*/
+
+/**
+  * @brief  Initialize the Pong game
+  * @retval None
+  */
+void pong_setup(void);
+
+/**
+  * @brief  Main game loop - call this repeatedly
+  * @retval None
+  */
+void pong_loop(void);
+
+/**
+  * @brief  Reset game to initial state
+  * @retval None
+  */
+void resetGame(void);
+
+/**
+  * @brief  Draw the complete game screen
+  * @retval None
+  */
+void drawGame(void);
+
+/**
+  * @brief  Draw the game court/border
+  * @retval None
+  */
+void drawCourt(void);
+
+/**
+  * @brief  Read button state
+  * @param  port: GPIO port of the button
+  * @param  pin: GPIO pin of the button
+  * @retval bool: True if button is pressed
+  */
+bool read_button(GPIO_TypeDef* port, uint16_t pin);
+
+/**
+  * @brief  Generate a tone on the buzzer
+  * @param  frequency: Tone frequency (approximate)
+  * @param  duration: Tone duration in milliseconds
+  * @retval None
+  */
+void tone(uint16_t frequency, uint16_t duration);
+
+/**
+  * @brief  Stop buzzer tone
+  * @retval None
+  */
+void noTone(void);
+
+/**
+  * @brief  Play player paddle hit sound
+  * @retval None
+  */
+void playerPaddleTone(void);
+
+/**
+  * @brief  Play MCU paddle hit sound
+  * @retval None
+  */
+void mcuPaddleTone(void);
+
+/**
+  * @brief  Play wall collision sound
+  * @retval None
+  */
+void wallTone(void);
+
+/**
+  * @brief  Play player score sound
+  * @retval None
+  */
+void player_scoreTone(void);
+
+/**
+  * @brief  Play MCU score sound
+  * @retval None
+  */
+void mcu_scoreTone(void);
+
+/**
+  * @brief  Simple delay function using HAL
+  * @param  ms: Delay time in milliseconds
+  * @retval None
+  */
+void delay_ms(uint32_t ms);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif /* PONG_H */

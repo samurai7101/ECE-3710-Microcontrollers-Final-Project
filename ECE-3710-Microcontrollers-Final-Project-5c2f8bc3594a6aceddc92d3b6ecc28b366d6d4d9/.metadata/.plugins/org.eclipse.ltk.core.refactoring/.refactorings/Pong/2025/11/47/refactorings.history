@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Pong/Drivers/NUNCHUCK/nunchuck.cpp&apos; to &apos;nunchuck.c&apos;" description="Rename resource &apos;nunchuck.cpp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Drivers/NUNCHUCK/nunchuck.cpp" name="nunchuck.c" stamp="1763765877949" updateReferences="true"/>
+</session>

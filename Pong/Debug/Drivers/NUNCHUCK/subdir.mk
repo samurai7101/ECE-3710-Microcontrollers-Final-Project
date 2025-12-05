@@ -5,13 +5,16 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-../Drivers/NUNCHUCK/nunchuck.c 
+../Drivers/NUNCHUCK/nunchuck.c \
+../Drivers/NUNCHUCK/nunchuck2.c 
 
 OBJS += \
-./Drivers/NUNCHUCK/nunchuck.o 
+./Drivers/NUNCHUCK/nunchuck.o \
+./Drivers/NUNCHUCK/nunchuck2.o 
 
 C_DEPS += \
-./Drivers/NUNCHUCK/nunchuck.d 
+./Drivers/NUNCHUCK/nunchuck.d \
+./Drivers/NUNCHUCK/nunchuck2.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
@@ -21,7 +24,7 @@ Drivers/NUNCHUCK/%.o Drivers/NUNCHUCK/%.su Drivers/NUNCHUCK/%.cyclo: ../Drivers/
 clean: clean-Drivers-2f-NUNCHUCK
 
 clean-Drivers-2f-NUNCHUCK:
-	-$(RM) ./Drivers/NUNCHUCK/nunchuck.cyclo ./Drivers/NUNCHUCK/nunchuck.d ./Drivers/NUNCHUCK/nunchuck.o ./Drivers/NUNCHUCK/nunchuck.su
+	-$(RM) ./Drivers/NUNCHUCK/nunchuck.cyclo ./Drivers/NUNCHUCK/nunchuck.d ./Drivers/NUNCHUCK/nunchuck.o ./Drivers/NUNCHUCK/nunchuck.su ./Drivers/NUNCHUCK/nunchuck2.cyclo ./Drivers/NUNCHUCK/nunchuck2.d ./Drivers/NUNCHUCK/nunchuck2.o ./Drivers/NUNCHUCK/nunchuck2.su
 
 .PHONY: clean-Drivers-2f-NUNCHUCK
 

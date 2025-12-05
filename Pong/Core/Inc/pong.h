@@ -24,7 +24,7 @@ extern "C" {
 #define PADDLE_HEIGHT      12
 #define BALL_RATE          16
 #define PADDLE_RATE        64
-#define SCORE_LIMIT        9
+#define SCORE_LIMIT        3
 
 /* Hardware Definitions ------------------------------------------------------*/
 // Use the definitions from main.h instead of redefining them

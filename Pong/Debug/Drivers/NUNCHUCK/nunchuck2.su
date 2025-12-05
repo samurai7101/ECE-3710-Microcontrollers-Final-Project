@@ -1,0 +1,2 @@
+../Drivers/NUNCHUCK/nunchuck2.c:6:6:nunchuck2_init	24	static
+../Drivers/NUNCHUCK/nunchuck2.c:20:13:nunchuck2_read	56	static
